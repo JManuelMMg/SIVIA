@@ -1,0 +1,168 @@
+{
+ "exhaustividad": {
+  "alcantarilla_riesgo · grande (>5 %)": {
+   "aciertos": 3,
+   "total": 4,
+   "valor": 0.75
+  },
+  "alcantarilla_riesgo · mediano (1-5 %)": {
+   "aciertos": 3,
+   "total": 10,
+   "valor": 0.3
+  },
+  "alcantarilla_tapada · grande (>5 %)": {
+   "aciertos": 5,
+   "total": 6,
+   "valor": 0.833
+  },
+  "alcantarilla_tapada · mediano (1-5 %)": {
+   "aciertos": 8,
+   "total": 17,
+   "valor": 0.471
+  },
+  "alcantarilla_tapada · pequeño (<1 %)": {
+   "aciertos": 3,
+   "total": 4,
+   "valor": 0.75
+  },
+  "arbol_riesgo · grande (>5 %)": {
+   "aciertos": 8,
+   "total": 34,
+   "valor": 0.235
+  },
+  "arbol_riesgo · mediano (1-5 %)": {
+   "aciertos": 2,
+   "total": 21,
+   "valor": 0.095
+  },
+  "dano_pavimento · grande (>5 %)": {
+   "aciertos": 38,
+   "total": 76,
+   "valor": 0.5
+  },
+  "dano_pavimento · mediano (1-5 %)": {
+   "aciertos": 17,
+   "total": 59,
+   "valor": 0.288
+  },
+  "dano_pavimento · pequeño (<1 %)": {
+   "aciertos": 7,
+   "total": 49,
+   "valor": 0.143
+  },
+  "fuente alcantarilla": {
+   "aciertos": 22,
+   "total": 41,
+   "valor": 0.537
+  },
+  "fuente arbol": {
+   "aciertos": 10,
+   "total": 55,
+   "valor": 0.182
+  },
+  "fuente rdd": {
+   "aciertos": 62,
+   "total": 184,
+   "valor": 0.337
+  },
+  "luz clara (>150) · alcantarilla_tapada": {
+   "aciertos": 2,
+   "total": 2,
+   "valor": 1.0
+  },
+  "luz clara (>150) · dano_pavimento": {
+   "aciertos": 28,
+   "total": 84,
+   "valor": 0.333
+  },
+  "luz normal · alcantarilla_riesgo": {
+   "aciertos": 4,
+   "total": 10,
+   "valor": 0.4
+  },
+  "luz normal · alcantarilla_tapada": {
+   "aciertos": 12,
+   "total": 19,
+   "valor": 0.632
+  },
+  "luz normal · arbol_riesgo": {
+   "aciertos": 10,
+   "total": 52,
+   "valor": 0.192
+  },
+  "luz normal · dano_pavimento": {
+   "aciertos": 34,
+   "total": 100,
+   "valor": 0.34
+  },
+  "luz oscura (<85) · alcantarilla_riesgo": {
+   "aciertos": 2,
+   "total": 4,
+   "valor": 0.5
+  },
+  "luz oscura (<85) · alcantarilla_tapada": {
+   "aciertos": 2,
+   "total": 6,
+   "valor": 0.333
+  },
+  "luz oscura (<85) · arbol_riesgo": {
+   "aciertos": 0,
+   "total": 3,
+   "valor": 0.0
+  }
+ },
+ "falsas_alarmas_por_imagen": {
+  "con objetos": {
+   "falsas": 16,
+   "imagenes": 199,
+   "valor": 0.08
+  },
+  "fuente alcantarilla": {
+   "falsas": 9,
+   "imagenes": 41,
+   "valor": 0.22
+  },
+  "fuente arbol": {
+   "falsas": 2,
+   "imagenes": 48,
+   "valor": 0.042
+  },
+  "fuente negativo": {
+   "falsas": 0,
+   "imagenes": 41,
+   "valor": 0.0
+  },
+  "fuente rdd": {
+   "falsas": 6,
+   "imagenes": 131,
+   "valor": 0.046
+  },
+  "luz clara (>150)": {
+   "falsas": 3,
+   "imagenes": 58,
+   "valor": 0.052
+  },
+  "luz normal": {
+   "falsas": 11,
+   "imagenes": 189,
+   "valor": 0.058
+  },
+  "luz oscura (<85)": {
+   "falsas": 3,
+   "imagenes": 14,
+   "valor": 0.214
+  },
+  "sin objetos": {
+   "falsas": 1,
+   "imagenes": 62,
+   "valor": 0.016
+  }
+ },
+ "umbrales": {
+  "alcantarilla_riesgo": 0.5,
+  "alcantarilla_tapada": 0.7,
+  "arbol_riesgo": 0.5,
+  "dano_pavimento": 0.5
+ },
+ "filtro": true
+}

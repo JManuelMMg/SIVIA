@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tablero de Inspección Urbana</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{--bg:#f4f5f2;--panel:#ffffff;--sunk:#eef0ec;--txt:#1b2320;--mut:#5b6863;--line:#dde2de;
+--acc:#1f6f5c;--acc-soft:#dcefe8;--hi:#c73b3b;--mid:#d39317;--ok:#2e8a57;--info:#2f6db5;--shadow:0 1px 2px rgba(0,0,0,.06),0 4px 14px rgba(0,0,0,.05)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1412;--panel:#171e1b;--sunk:#121816;--txt:#e6ebe8;--mut:#98a6a0;--line:#29332f;--acc:#5cc2a2;--acc-soft:#1c3a31;--hi:#ef6b6b;--mid:#e9b24a;--ok:#56bf83;--info:#6ea3e6;--shadow:none}}
+:root[data-theme="dark"]{--bg:#0f1412;--panel:#171e1b;--sunk:#121816;--txt:#e6ebe8;--mut:#98a6a0;--line:#29332f;--acc:#5cc2a2;--acc-soft:#1c3a31;--hi:#ef6b6b;--mid:#e9b24a;--ok:#56bf83;--info:#6ea3e6;--shadow:none}
+*{box-sizing:border-box}
+body{margin:0;font:14px/1.45 "Segoe UI",system-ui,-apple-system,Arial,sans-serif;background:var(--bg);color:var(--txt)}
+button,select,input{font:inherit;color:inherit}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--line);background:var(--panel)}
+h1{font-size:18px;margin:0;letter-spacing:-.01em}
+header p{margin:2px 0 0;color:var(--mut);font-size:12.5px}
+.ctl{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{border:0;background:var(--panel);padding:6px 10px;cursor:pointer;font-size:12.5px}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--acc);color:#fff}
+.icon{border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:6px 9px;cursor:pointer}
+.kpis{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;padding:12px 18px}
+.k{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;box-shadow:var(--shadow)}
+.k b{display:block;font-size:21px;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.k>span{color:var(--mut);font-size:11.5px;line-height:1.3;display:block}
+main{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:12px;padding:0 18px 12px}
+#map{height:calc(100vh - 210px);min-height:520px;border-radius:10px;border:1px solid var(--line)}
+.side{background:var(--panel);border:1px solid var(--line);border-radius:10px;display:flex;flex-direction:column;height:calc(100vh - 210px);min-height:520px;box-shadow:var(--shadow)}
+.tabs{display:flex;border-bottom:1px solid var(--line)}
+.tabs button{flex:1;border:0;background:none;padding:10px 6px;cursor:pointer;color:var(--mut);border-bottom:2px solid transparent;font-weight:600;font-size:13px}
+.tabs button[aria-selected="true"]{color:var(--txt);border-bottom-color:var(--acc)}
+.pane{display:none;overflow:auto;flex:1;min-height:0}
+.pane.on{display:block}
+.filters{display:flex;gap:6px;flex-wrap:wrap;padding:10px 12px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--panel);z-index:2}
+.filters select,.filters input{padding:5px 7px;border:1px solid var(--line);border-radius:6px;background:var(--panel);min-width:0;flex:1 1 130px}
+.row{padding:10px 12px;border-bottom:1px solid var(--line);cursor:pointer;display:grid;grid-template-columns:52px 1fr;gap:10px}
+.row:hover{background:var(--sunk)}
+.pr{font-weight:700;font-variant-numeric:tabular-nums;text-align:right;font-size:15px}
+.pr small{display:block;font-weight:500;font-size:10.5px;color:var(--mut)}
+.row .t{font-weight:600}
+.row small{display:block;color:var(--mut);font-size:12px}
+.tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:99px;background:var(--acc-soft);color:var(--acc);margin-right:4px;font-weight:600}
+.tag.up{background:rgba(199,59,59,.12);color:var(--hi)}
+.bar{display:flex;gap:8px;align-items:center;justify-content:space-between;padding:8px 12px;color:var(--mut);font-size:12px;border-bottom:1px solid var(--line)}
+.btn{border:1px solid var(--line);background:var(--panel);border-radius:7px;padding:5px 10px;cursor:pointer;font-size:12.5px}
+.btn.pri{background:var(--acc);border-color:var(--acc);color:#fff}
+.cand{display:grid;grid-template-columns:150px 1fr;gap:10px;padding:10px 12px;border-bottom:1px solid var(--line)}
+.cand .ph{border-radius:6px;overflow:hidden;cursor:zoom-in}
+.cand .st{font-size:12px;font-weight:700}
+.st.ok{color:var(--ok)}.st.no{color:var(--mut)}
+.ph{position:relative;background:#000;width:100%}
+.ph img{display:block;width:100%;height:100%;object-fit:cover}
+.bx{position:absolute;border:2px solid;border-radius:2px;pointer-events:none}
+.bx i{position:absolute;left:-2px;top:-17px;font:600 10.5px/15px system-ui;padding:0 4px;color:#000;white-space:nowrap;font-style:normal}
+.sec{padding:12px 14px;border-bottom:1px solid var(--line)}
+.sec h3{margin:0 0 8px;font-size:13.5px}
+.sec p{margin:6px 0;color:var(--mut);font-size:12.5px}
+.days{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.day{background:var(--sunk);border-radius:8px;padding:8px;text-align:center;font-size:12px}
+.day b{display:block;font-size:15px;font-variant-numeric:tabular-nums}
+.lvl{font-weight:700}.l0{color:var(--ok)}.l1{color:var(--mid)}.l2{color:var(--hi)}
+table.f{width:100%;border-collapse:collapse;font-size:12.5px}
+table.f td{padding:4px 0;border-bottom:1px solid var(--line)}
+table.f td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.chart{position:relative;height:210px}
+dialog{border:0;border-radius:12px;padding:0;max-width:min(980px,96vw);width:100%;background:var(--panel);color:var(--txt);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+dialog::backdrop{background:rgba(0,0,0,.45)}
+.dh{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.dh h2{margin:0;font-size:17px}
+.db{display:grid;grid-template-columns:1.25fr 1fr;gap:14px;padding:14px 16px;max-height:76vh;overflow:auto}
+.thumbs{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+.thumbs img{width:64px;height:44px;object-fit:cover;border-radius:4px;cursor:pointer;opacity:.6;border:2px solid transparent}
+.thumbs img.on{opacity:1;border-color:var(--acc)}
+.cred{font-size:11px;color:var(--mut);margin-top:4px}
+.links{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.links a{font-size:12.5px;color:var(--acc);text-decoration:none;border:1px solid var(--line);padding:4px 9px;border-radius:7px}
+.legend{background:var(--panel);color:var(--txt);padding:8px 10px;border-radius:8px;border:1px solid var(--line);font-size:12px;line-height:1.7}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+footer{padding:4px 18px 18px;color:var(--mut);font-size:11.5px}
+.leaflet-container{font:inherit;background:var(--sunk)}
+.leaflet-popup-content{margin:10px 12px;font-size:13px}
+.empty{padding:24px;text-align:center;color:var(--mut)}
+@media (max-width:1100px){.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:860px){main{grid-template-columns:1fr}#map{height:420px;min-height:0}.side{height:620px}.db{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}header,.kpis,main,footer{padding-left:16px;padding-right:16px}}
+@media print{body *{visibility:hidden}#print,#print *{visibility:visible}#print{position:absolute;inset:0}}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>SIVIA · Inspección urbana alrededor de escuelas, guarderías y hospitales</h1>
+    <p>Guadalajara, Jalisco · Prototipo para el Hackathon Jalisco 2026, Reto 01 Ciudades Inteligentes</p>
+  </div>
+  <div class="ctl">
+    <span style="font-size:12.5px;color:var(--mut)">Clima (SMN):</span>
+    <div class="seg" id="modo" role="group" aria-label="Escenario de clima">
+      <button data-m="actual" aria-pressed="true">Pronóstico actual</button>
+      <button data-m="extremo" aria-pressed="false">Evento extremo</button>
+      <button data-m="ninguno" aria-pressed="false">Sin clima</button>
+    </div>
+    <button class="icon" id="tema" title="Cambiar tema" aria-label="Cambiar tema">◐</button>
+  </div>
+</header>
+
+<section class="kpis" id="kpis"></section>
+
+<main>
+  <div id="map" role="region" aria-label="Mapa"></div>
+  <div class="side">
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="true" data-t="ord">Órdenes</button>
+      <button role="tab" aria-selected="false" data-t="viv">En vivo</button>
+      <button role="tab" aria-selected="false" data-t="val">Validación IA</button>
+      <button role="tab" aria-selected="false" data-t="cli">Clima SMN</button>
+      <button role="tab" aria-selected="false" data-t="ana">Análisis</button>
+    </div>
+    <div class="pane on" id="p-ord">
+      <div class="filters">
+        <input id="q" type="search" placeholder="Buscar institución o colonia">
+        <select id="fdep"><option value="">Todas las dependencias</option></select>
+        <select id="fzon"><option value="">Todas las zonas</option></select>
+        <select id="ftip"><option value="">Todos los tipos</option></select>
+      </div>
+      <div class="bar"><span id="cuenta"></span><button class="btn" id="csv">Exportar CSV</button></div>
+      <div id="lista"></div>
+    </div>
+    <div class="pane" id="p-viv">
+      <div class="sec"><h3>Cámara del vehículo GDL-01</h3><p id="vst">Buscando el centro de control…</p>
+        <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap"><button class="btn pri" id="vplay">▶ Reproducir recorrido</button><button class="btn" id="vreset">Reiniciar</button><span id="vprog" style="font-size:12px;color:var(--mut)"></span></div>
+        <div id="vframe" style="margin-top:10px"></div></div>
+      <div class="bar"><span id="vcnt">Sin eventos todavía</span><select id="vfil2" class="btn"><option value="">Todos</option><option value="activo">Por atender</option><option value="resuelto">Resueltos</option><option value="descartado">Descartados</option></select></div>
+      <div id="vfeed"></div>
+    </div>
+    <div class="pane" id="p-val">
+      <div class="sec"><h3>Candidatos detectados por el modelo</h3>
+        <p>El modelo entrenado en Edge Impulse revisa cada imagen de calle. Sus detecciones no se convierten en orden hasta que una persona las confirma. Lo validado se guarda en este navegador y se puede exportar.</p></div>
+      <div class="bar"><span id="vcuenta"></span><span style="display:flex;gap:6px"><select id="vfil" class="btn"><option value="pend">Pendientes</option><option value="ok">Confirmados</option><option value="no">Descartados</option><option value="">Todos</option></select><button class="btn" id="vcsv">Exportar confirmados</button></span></div>
+      <div id="vlista"></div>
+    </div>
+    <div class="pane" id="p-cli"></div>
+    <div class="pane" id="p-ana">
+      <div class="sec"><h3>Órdenes por dependencia</h3><div class="chart"><canvas id="c1"></canvas></div></div>
+      <div class="sec"><h3>Órdenes por zona</h3><div class="chart"><canvas id="c2"></canvas></div></div>
+      <div class="sec"><h3>Lluvia y accidentes por mes, 2022-2024</h3><div class="chart"><canvas id="c3"></canvas></div><p id="c3n"></p></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+Fuentes: Directorio Estadístico Nacional de Unidades Económicas, INEGI 05/2026 (catálogo #09) · Accidentes de tránsito terrestre georreferenciados, INEGI 2022-2024 (catálogo #08) · Base de Datos Climatológica Nacional y pronóstico por municipio, SMN/CONAGUA (catálogo #45) · Imágenes de calle © Mapillary y sus autores, CC BY-SA 4.0 · Detector entrenado en Edge Impulse con RDD2022 (Arya et al., 2022, CC BY 4.0) e imágenes etiquetadas por el equipo · Mapa base © OpenStreetMap, imágenes satelitales © Esri.
+Las prioridades son una recomendación. Antes de intervenir, personal técnico revisa cada caso.
+</footer>
+
+<dialog id="dlg" aria-labelledby="dt"></dialog>
+<div id="print"></div>
+
+<script>
+const D=/*__DATA__*/null;
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=n=>n.toLocaleString('es-MX');
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const NOMBRES={bache:'Bache',dano_pavimento:'Daño en pavimento',arbol_riesgo:'Árbol en riesgo',grieta_cocodrilo:'Pavimento agrietado',alcantarilla_tapada:'Rejilla pluvial (limpieza preventiva)',alcantarilla_riesgo:'Alcantarilla obstruida o dañada',rama_riesgo:'Rama en riesgo',rama_sobre_cable:'Rama sobre cable',tronco_inclinado:'Tronco inclinado',poste_electrico:'Poste y cableado',cruce_peatonal:'Cruce peatonal'};
+const COLB={bache:'#ff4d4d',dano_pavimento:'#ff4d4d',arbol_riesgo:'#7ee05c',grieta_cocodrilo:'#ff9a3c',alcantarilla_tapada:'#38d9f0',alcantarilla_riesgo:'#e05cf0',rama_riesgo:'#7ee05c',rama_sobre_cable:'#7ee05c',tronco_inclinado:'#7ee05c',poste_electrico:'#ffd23c',cruce_peatonal:'#6cf08a'};
+const byId=Object.fromEntries(D.p.map(p=>[p.id,p]));
+const ESTO=['Pendiente','Asignada','En atención','Resuelta'];let estO=store.get('estado_ordenes_v1',{});const keyO=o=>o.iid+'|'+o.k;
+let modo='actual', val=store.get('validacion_v1',{});
+
+/* ---------- prioridad con clima ---------- */
+const factor=k=>modo==='actual'?(D.clima.factores_actuales[k]||1):modo==='extremo'?(D.clima.factores_escenario_extremo[k]||1):1;
+const prio=o=>Math.round(o.pb*factor(o.k)*10)/10;
+
+/* ---------- KPIs ---------- */
+function kpis(){
+  const n=[0,1,2].map(i=>D.p.filter(p=>p.n===i).length);
+  const sube=D.o.filter(o=>factor(o.k)>1).length;
+  const conf=Object.values(val).filter(v=>v==='ok').length;
+  const na=D.clima.nivel_actual, nv=Math.max(na.lluvia,na.viento);
+  const k=[[fmt(D.p.length),'escuelas, guarderías y hospitales en el inventario (DENUE)'],
+   ['63%','de 11,568 accidentes 2022-2024 ocurrieron a 200 m o menos de una institución (ATUS)'],
+   [fmt(D.o.length),'órdenes de trabajo generadas por el agente · '+Object.values(estO).filter(e=>e==='Resuelta').length+' resueltas'+(sube?` · ${sube} suben por clima`:'')],
+   [`<i style="font-style:normal;color:var(--hi)">${n[2]}</i> · <i style="font-style:normal;color:var(--mid)">${n[1]}</i>`,'instituciones en nivel alto · medio'],
+   [`${D.cand.length-Object.keys(val).length}`,`candidatos del modelo por validar · ${conf} confirmados`],
+   [`<span class="lvl l${modo==='extremo'?2:modo==='ninguno'?0:nv}">${modo==='extremo'?'Extremo':modo==='ninguno'?'Sin clima':['Normal','Fuerte','Extremo'][nv]}</span>`,modo==='extremo'?`escenario: lluvia ≥ ${D.clima.umbrales_mm.p99} mm (p99 histórico) y ráfagas fuertes`:'nivel del pronóstico SMN para los próximos 4 días']];
+  $('#kpis').innerHTML=k.map(([b,s])=>`<div class="k"><b>${b}</b><span>${s}</span></div>`).join('');
+}
+
+/* ---------- mapa ---------- */
+const map=L.map('map',{preferCanvas:true}).setView([20.672,-103.345],12);
+const osm=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(map);
+const sat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Imágenes © Esri'});
+const colN=()=>[css('--ok'),css('--mid'),css('--hi')];
+const capInst=L.layerGroup().addTo(map), capCand=L.layerGroup();
+function dibujaInst(){
+  capInst.clearLayers(); const c=colN();
+  D.p.slice().sort((a,b)=>a.n-b.n).forEach(p=>L.circleMarker([p.la,p.ln],{radius:p.n?6:3.5,color:c[p.n],fillColor:c[p.n],fillOpacity:.8,weight:1}).addTo(capInst)
+   .bindTooltip(esc(p.nom)).on('click',()=>abrir(p.id)));
+}
+const heat=L.heatLayer(D.acc.map(a=>[a[0],a[1],.5]),{radius:14,blur:18,maxZoom:15,minOpacity:.25});
+const peat=L.layerGroup(D.acc.filter(a=>a[2]).map(a=>L.circleMarker([a[0],a[1]],{radius:3,color:'#7b2cbf',weight:1,fillOpacity:.9}).bindTooltip('Accidente con peatón (ATUS)')));
+function dibujaCand(){capCand.clearLayers();D.cand.forEach(c=>{const v=val[c.f];if(v==='no')return;
+  L.circleMarker([c.la+0.00012,c.ln+0.00012],{radius:5,color:v==='ok'?css('--hi'):css('--info'),weight:2,fillOpacity:.15,dashArray:v==='ok'?null:'3 3'})
+  .bindTooltip(`${NOMBRES[c.k]||c.k} · modelo ${Math.round(c.s*100)}% · ${v==='ok'?'confirmado':'por validar'}`).on('click',()=>abrir(c.iid,c.f)).addTo(capCand)});}
+L.control.layers({'Calles':osm,'Satélite':sat},{'Instituciones por nivel':capInst,'Mapa de calor de accidentes':heat,'Atropellamientos':peat,'Candidatos del modelo':capCand},{collapsed:true}).addTo(map);
+const lg=L.control({position:'bottomleft'});lg.onAdd=()=>{const d=L.DomUtil.create('div','legend');
+ d.innerHTML=`<span class="dot" style="background:var(--hi)"></span>Alto: hallazgo con atropellamientos o sin cruce<br><span class="dot" style="background:var(--mid)"></span>Medio: hallazgo, atropellamiento o 15+ accidentes<br><span class="dot" style="background:var(--ok)"></span>Sin hallazgos`;return d};lg.addTo(map);
+
+/* ---------- órdenes ---------- */
+const uniq=k=>[...new Set(D.o.map(o=>o[k]))].sort();
+uniq('dep').forEach(v=>$('#fdep').add(new Option(v,v)));uniq('z').forEach(v=>$('#fzon').add(new Option(v,v)));uniq('t').forEach(v=>$('#ftip').add(new Option(v,v)));
+function filtradas(){const q=$('#q').value.trim().toLowerCase(),d=$('#fdep').value,z=$('#fzon').value,t=$('#ftip').value;
+  return D.o.filter(o=>(!d||o.dep===d)&&(!z||o.z===z)&&(!t||o.t===t)&&(!q||(o.inst+' '+o.col+' '+o.dir).toLowerCase().includes(q)))
+   .map(o=>({...o,p:prio(o)})).sort((a,b)=>b.p-a.p);}
+function lista(){
+  const f=filtradas();$('#cuenta').textContent=`${fmt(f.length)} órdenes`;
+  $('#lista').innerHTML=f.length?f.slice(0,400).map((o,i)=>{const fc=factor(o.k);
+   return `<div class="row" data-i="${o.iid}" data-f="${esc(o.img)}"><div class="pr">${o.p.toFixed(0)}<small>#${i+1}</small></div>
+   <div><div class="t">${esc(o.h)}</div><small>${esc(o.inst)} · ${esc(o.t)}</small><small>${esc(o.dir)}, ${esc(o.col)}</small>
+   <div style="margin-top:4px"><span class="tag">${esc(o.dep)}</span><span class="tag">${esc(o.z)}</span>${fc>1?`<span class="tag up">clima ×${fc.toFixed(2)}</span>`:''}${estO[keyO(o)]&&estO[keyO(o)]!=='Pendiente'?`<span class="tag" style="background:var(--sunk);color:var(--txt)">${estO[keyO(o)]}</span>`:''}</div></div></div>`}).join(''):'<div class="empty">No hay órdenes con esos filtros.</div>';
+}
+$('#lista').addEventListener('click',e=>{const r=e.target.closest('.row');if(r)abrir(r.dataset.i,r.dataset.f)});
+['#q','#fdep','#fzon','#ftip'].forEach(s=>$(s).addEventListener('input',lista));
+function descarga(nombre,filas){const t=String.fromCharCode(65279)+filas.map(r=>r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(',')).join('\n');
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:'text/csv'}));a.download=nombre;a.click();}
+$('#csv').onclick=()=>descarga(`ordenes_${modo}.csv`,[['prioridad','hallazgo','dependencia','institucion','tipo','zona','direccion','colonia','lat','lng','factor_clima','explicacion']]
+  .concat(filtradas().map(o=>[o.p,o.h,o.dep,o.inst,o.t,o.z,o.dir,o.col,o.la,o.ln,factor(o.k),o.x])));
+
+/* ---------- foto con cajas ---------- */
+function foto(f,soloModelo){const m=D.img[f];if(!m)return'<div class="empty">Sin imagen disponible</div>';
+  const cajas=m.c.filter(c=>!soloModelo||c[6]==='modelo').map(c=>`<div class="bx" style="left:${c[2]*100}%;top:${c[3]*100}%;width:${c[4]*100}%;height:${c[5]*100}%;border-color:${COLB[c[0]]||'#fff'};${c[6]==='modelo'?'border-style:dashed':''}"><i style="background:${COLB[c[0]]||'#fff'}">${NOMBRES[c[0]]||c[0]}${c[6]==='modelo'?' · IA '+Math.round(c[1]*100)+'%':''}</i></div>`).join('');
+  return `<div class="ph" style="aspect-ratio:${1/m.r}"><img loading="lazy" src="img/${esc(f)}" alt="Imagen de calle cercana">${cajas}</div>`;}
+const cred=f=>{const m=D.img[f];return m?`Imagen ${esc(m.fecha)} · © ${esc(m.autor||'colaborador')} / Mapillary, CC BY-SA 4.0`:''};
+
+/* ---------- detalle de institución ---------- */
+function abrir(id,f){
+  const p=byId[id];if(!p)return;const os=D.o.filter(o=>o.iid===id).map(o=>({...o,p:prio(o)})).sort((a,b)=>b.p-a.p);
+  const fs=p.img.length?p.img:[];let cur=f&&fs.includes(f)?f:fs[0];
+  map.setView([p.la,p.ln],17);
+  const gm=`https://www.google.com/maps/search/?api=1&query=${p.la},${p.ln}`, sv=`https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${p.la},${p.ln}`;
+  $('#dlg').innerHTML=`<div class="dh"><div><h2 id="dt">${esc(p.nom)}</h2><div style="color:var(--mut);font-size:12.5px">${esc(p.t)} · ${esc(p.per)} · ${esc(p.dir)}, ${esc(p.col)} · ${esc(p.z)}</div></div><button class="icon" id="cerrar" aria-label="Cerrar">✕</button></div>
+  <div class="db"><div><div id="fot">${cur?foto(cur):'<div class="empty">Esta institución todavía no tiene imágenes de calle. Queda en la ruta de la próxima inspección.</div>'}</div>
+   <div class="cred" id="cr">${cur?cred(cur):''}</div>
+   <div class="thumbs">${fs.map(x=>`<img src="img/${esc(x)}" data-f="${esc(x)}" class="${x===cur?'on':''}" alt="">`).join('')}</div>
+   <div class="links">${cur?`<a target="_blank" rel="noopener" id="lm" href="https://www.mapillary.com/app/?pKey=${D.img[cur].id}&focus=photo">Ver en Mapillary</a>`:''}<a target="_blank" rel="noopener" href="${gm}">Abrir en Google Maps</a><a target="_blank" rel="noopener" href="${sv}">Recorrido en Google Street View</a></div></div>
+   <div><table class="f"><tr><td>Accidentes a 200 m o menos (2022-2024)</td><td>${p.acc}</td></tr><tr><td>Con peatón involucrado</td><td>${p.peat}</td></tr><tr><td>Personas heridas</td><td>${p.her}</td></tr><tr><td>Personas fallecidas</td><td>${p.mue}</td></tr><tr><td>Nivel</td><td class="lvl l${p.n}">${['Sin hallazgos','Medio','Alto'][p.n]}</td></tr></table>
+   <h3 style="font-size:14px;margin:14px 0 6px">Órdenes de trabajo</h3>
+   ${os.length?os.map(o=>`<div style="padding:8px 0;border-bottom:1px solid var(--line)"><b>${o.p.toFixed(0)}</b> · ${esc(o.h)}<div style="font-size:12px;color:var(--mut)">${esc(o.dep)}${factor(o.k)>1?` · clima ×${factor(o.k).toFixed(2)}`:''}</div><div style="font-size:12px;margin-top:3px">${esc(o.x)}</div><label style="font-size:12px;color:var(--mut)">Estado <select class="btn est" data-key="${keyO(o)}">${ESTO.map(e=>`<option ${(estO[keyO(o)]||'Pendiente')===e?'selected':''}>${e}</option>`).join('')}</select></label></div>`).join(''):'<p style="color:var(--mut);font-size:12.5px">Sin órdenes en la inspección actual.</p>'}
+   <div class="links">${os.length?'<button class="btn pri" id="imp">Imprimir orden</button>':''}</div></div></div>`;
+  const dlg=$('#dlg');dlg.showModal();$('#cerrar').onclick=()=>dlg.close();
+  dlg.querySelectorAll('select.est').forEach(x=>x.onchange=()=>{estO[x.dataset.key]=x.value;store.set('estado_ordenes_v1',estO);lista();kpis();});
+  dlg.querySelectorAll('.thumbs img').forEach(t=>t.onclick=()=>{cur=t.dataset.f;$('#fot').innerHTML=foto(cur);$('#cr').innerHTML=cred(cur);
+    dlg.querySelectorAll('.thumbs img').forEach(x=>x.classList.toggle('on',x===t));const lm=$('#lm');if(lm)lm.href=`https://www.mapillary.com/app/?pKey=${D.img[cur].id}&focus=photo`;});
+  const imp=$('#imp');if(imp)imp.onclick=()=>imprimir(p,os,cur);
+}
+$('#dlg').addEventListener('click',e=>{if(e.target.id==='dlg')e.target.close()});
+
+function imprimir(p,os,f){
+  const hoy=new Date().toLocaleDateString('es-MX',{dateStyle:'long'});
+  $('#print').innerHTML=`<div style="font:13px/1.5 Arial;color:#000;padding:28px;max-width:760px">
+  <div style="display:flex;justify-content:space-between;border-bottom:2px solid #000;padding-bottom:8px"><b style="font-size:17px">Orden de trabajo preventiva</b><span>${hoy}</span></div>
+  <p><b>${esc(p.nom)}</b> (${esc(p.t)}, ${esc(p.per)})<br>${esc(p.dir)}, ${esc(p.col)}, Guadalajara · ${p.la}, ${p.ln}</p>
+  ${os.map(o=>`<div style="border:1px solid #999;padding:8px 10px;margin:8px 0"><b>Prioridad ${o.p.toFixed(0)}</b> · ${esc(o.h)}<br>Dependencia: ${esc(o.dep)}<br><span style="font-size:12px">${esc(o.x)}</span></div>`).join('')}
+  ${f?`<div style="max-width:520px">${foto(f)}</div><div style="font-size:10.5px">${cred(f)}</div>`:''}
+  <p style="margin-top:18px">Validó en campo: ____________________ &nbsp; Fecha: ____________ &nbsp; Resultado: ☐ Atendido ☐ No procede</p></div>`;
+  window.print();
+}
+
+/* ---------- validación ---------- */
+function vlista(){
+  const fil=$('#vfil').value;const xs=D.cand.filter(c=>fil==='pend'?!val[c.f]:fil?val[c.f]===fil:true);
+  const conf=Object.values(val).filter(v=>v==='ok').length,des=Object.values(val).filter(v=>v==='no').length;
+  $('#vcuenta').textContent=`${D.cand.length-conf-des} pendientes · ${conf} confirmados · ${des} descartados`;
+  $('#vlista').innerHTML=xs.length?xs.slice(0,150).map(c=>`<div class="cand" data-f="${esc(c.f)}"><div class="ph-w" data-i="${c.iid}">${foto(c.f,true)}</div>
+   <div><b>${NOMBRES[c.k]||c.k}</b> <span style="color:var(--mut)">· confianza ${Math.round(c.s*100)}%</span><small style="display:block;color:var(--mut)">${esc(c.inst)} · ${esc(c.z)}</small>
+   <div class="st ${val[c.f]||''}">${val[c.f]==='ok'?'Confirmado: pasa a orden':val[c.f]==='no'?'Descartado':'Por validar'}</div>
+   <div style="display:flex;gap:6px;margin-top:6px"><button class="btn pri" data-v="ok">Confirmar</button><button class="btn" data-v="no">Descartar</button>${val[c.f]?'<button class="btn" data-v="">Deshacer</button>':''}</div></div></div>`).join(''):'<div class="empty">No hay candidatos en esta vista.</div>';
+}
+$('#vlista').addEventListener('click',e=>{const b=e.target.closest('button[data-v]'),w=e.target.closest('.ph-w');const c=e.target.closest('.cand');if(!c)return;
+  if(b){const f=c.dataset.f;if(b.dataset.v)val[f]=b.dataset.v;else delete val[f];store.set('validacion_v1',val);vlista();dibujaCand();kpis();}
+  else if(w)abrir(w.dataset.i,c.dataset.f);});
+$('#vfil').onchange=vlista;
+$('#vcsv').onclick=()=>descarga('candidatos_confirmados.csv',[['hallazgo','confianza_modelo','institucion','zona','lat','lng','imagen_mapillary']]
+  .concat(D.cand.filter(c=>val[c.f]==='ok').map(c=>[NOMBRES[c.k]||c.k,c.s,c.inst,c.z,c.la,c.ln,'https://www.mapillary.com/app/?pKey='+D.img[c.f].id])));
+
+/* ---------- clima ---------- */
+function clima(){
+  const C=D.clima,u=C.umbrales_mm,lv=['Normal','Fuerte','Extremo'];
+  const dias=C.pronostico.map(d=>{const f=`${d.fecha.slice(6,8)}/${d.fecha.slice(4,6)}`;const n=Math.max(d.nivel_lluvia,d.nivel_viento);
+    return `<div class="day"><span>${f}</span><b>${d.prec_mm} mm</b><span>${d.prob_prec}% lluvia</span><br><span>ráfagas ${d.rafagas_kmh} km/h</span><div class="lvl l${n}">${lv[n]}</div></div>`}).join('');
+  const fa=C.factores_escenario_extremo;
+  $('#p-cli').innerHTML=`<div class="sec"><h3>Pronóstico SMN para Guadalajara</h3><div class="days">${dias}</div>
+   <p>El agente Vigía compara el pronóstico con la historia de la ciudad. Si la lluvia esperada supera los percentiles históricos o hay ráfagas fuertes, sube la prioridad de los hallazgos que empeoran con agua o viento.</p></div>
+   <div class="sec"><h3>Umbrales históricos de lluvia diaria</h3><table class="f">
+   <tr><td>Lluvia fuerte (percentil 90 de días con lluvia)</td><td>${u.p90} mm</td></tr><tr><td>Lluvia muy fuerte (percentil 95)</td><td>${u.p95} mm</td></tr><tr><td>Evento extremo (percentil 99)</td><td>${u.p99} mm</td></tr>
+   <tr><td>Máximo registrado (${C.maximo_historico.fecha})</td><td>${C.maximo_historico.mm} mm</td></tr><tr><td>Días con dato, ${C.periodo_historico[0].slice(0,4)}-${C.periodo_historico[1].slice(0,4)}</td><td>${fmt(C.dias_con_dato)}</td></tr></table>
+   <p>Estaciones 14065 Guadalajara (OBS) y 14066 Guadalajara (DGE), Base de Datos Climatológica Nacional.</p></div>
+   <div class="sec"><h3>Lluvia mensual promedio y días extremos</h3><div class="chart"><canvas id="c4"></canvas></div><p>Entre junio y septiembre ocurre el ${Math.round(C.eventos_extremos_por_mes.slice(5,9).reduce((a,b)=>a+b,0)/C.eventos_extremos_por_mes.reduce((a,b)=>a+b,0)*100)}% de los días con lluvia extrema. Es la ventana para el mantenimiento preventivo.</p></div>
+   <div class="sec"><h3>Ajuste de prioridad en un evento extremo</h3><table class="f">${Object.entries(fa).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`<tr><td>${NOMBRES[k]||'Escuela sin cruce peatonal'}</td><td>×${v.toFixed(2)}</td></tr>`).join('')}</table></div>`;
+}
+
+/* ---------- gráficas ---------- */
+let charts=[];
+function graficas(){
+  charts.forEach(c=>c.destroy());charts=[];
+  Chart.defaults.color=css('--mut');Chart.defaults.borderColor=css('--line');Chart.defaults.font.family=getComputedStyle(document.body).fontFamily;
+  const cnt=k=>{const m={};D.o.forEach(o=>m[o[k]]=(m[o[k]]||0)+1);return Object.entries(m).sort((a,b)=>b[1]-a[1])};
+  const base={responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}}};
+  const a=cnt('dep'),b=cnt('z');
+  charts.push(new Chart($('#c1'),{type:'bar',data:{labels:a.map(x=>x[0]),datasets:[{data:a.map(x=>x[1]),backgroundColor:css('--acc'),borderRadius:4}]},options:{...base,indexAxis:'y'}}));
+  charts.push(new Chart($('#c2'),{type:'bar',data:{labels:b.map(x=>x[0].replace(/Zona \d · /,'')),datasets:[{data:b.map(x=>x[1]),backgroundColor:css('--acc'),borderRadius:4}]},options:base}));
+  const M=D.clima.lluvia_vs_accidentes.meses;
+  charts.push(new Chart($('#c3'),{data:{labels:M.map(m=>`${m.mes}/${String(m.anio).slice(2)}`),datasets:[
+    {type:'bar',label:'Lluvia (mm)',data:M.map(m=>m.lluvia_mm),backgroundColor:css('--info'),yAxisID:'y',borderRadius:3},
+    {type:'line',label:'Accidentes',data:M.map(m=>m.accidentes),borderColor:css('--hi'),backgroundColor:css('--hi'),pointRadius:2,yAxisID:'y1',tension:.3}]},
+    options:{...base,plugins:{legend:{display:true,position:'bottom'}},scales:{y:{title:{display:true,text:'mm'}},y1:{position:'right',grid:{display:false},title:{display:true,text:'accidentes'}}}}}));
+  const L2=D.clima.lluvia_vs_accidentes;
+  $('#c3n').textContent=`Correlación mensual r = ${L2.pearson_r}. Promedio de accidentes al mes: ${L2.accidentes_promedio_temporal_jun_sep} en temporal (junio a septiembre) y ${L2.accidentes_promedio_resto} el resto del año. La lluvia no explica por sí sola los accidentes. El factor de clima se aplica porque el agua y el viento dañan alcantarillas, pavimento y árboles.`;
+  const c4=$('#c4');if(c4)charts.push(new Chart(c4,{data:{labels:['E','F','M','A','M','J','J','A','S','O','N','D'],datasets:[
+    {type:'bar',label:'Lluvia promedio (mm)',data:D.clima.climatologia_mensual_mm,backgroundColor:css('--info'),borderRadius:3,yAxisID:'y'},
+    {type:'line',label:'Días extremos (≥ p95)',data:D.clima.eventos_extremos_por_mes,borderColor:css('--hi'),backgroundColor:css('--hi'),pointRadius:2,yAxisID:'y1'}]},
+    options:{...base,plugins:{legend:{display:true,position:'bottom'}},scales:{y1:{position:'right',grid:{display:false}}}}}));
+}
+
+/* ---------- en vivo: cámara del vehículo -> centro de control -> operador ---------- */
+const SIG={nuevo:['confirmado','Confirmar'],confirmado:['asignado','Asignar a cuadrilla'],asignado:['en atención','Iniciar atención'],'en atención':['resuelto','Marcar resuelto']};
+const V={ev:{},orden:[],desde:0,srv:false,timer:null,i:0,est:store.get('vivo_v1',{}),trail:[],frame:null};
+const capViv=L.layerGroup().addTo(map);let vMarker=null,vLine=null;
+const vehIcon=()=>L.divIcon({className:'',html:`<div style="width:18px;height:18px;border-radius:50%;background:${css('--info')};border:3px solid #fff;box-shadow:0 0 0 2px ${css('--info')}"></div>`,iconSize:[18,18],iconAnchor:[9,9]});
+const estV=id=>V.est[id]||'nuevo';
+function cajaHTML(c,k,s){const col=COLB[k]||'#fff';return `<div class="bx" style="left:${c[0]*100}%;top:${c[1]*100}%;width:${c[2]*100}%;height:${c[3]*100}%;border-color:${col}"><i style="background:${col}">${NOMBRES[k]||k} ${Math.round(s*100)}%</i></div>`}
+function fotoEv(f,dets){const m=D.img[f];if(!m)return'';return `<div class="ph" style="aspect-ratio:${1/m.r}"><img src="img/${esc(f)}" alt="Cuadro de la cámara">${dets.map(d=>cajaHTML(d.caja,d.k,d.s)).join('')}</div>`}
+function vCuadro(){const F=V.frame;$('#vframe').innerHTML=F?fotoEv(F.f,F.d)+`<div class="cred">${cred(F.f)}</div>`:''}
+function vMapa(){capViv.eachLayer(l=>{if(l!==vMarker&&l!==vLine)capViv.removeLayer(l)});
+  V.orden.forEach(id=>{const e=V.ev[id],st=estV(id);if(st==='descartado')return;
+    L.circleMarker([e.la,e.ln],{radius:8,color:st==='resuelto'?css('--ok'):css('--hi'),weight:3,fillOpacity:.25}).bindTooltip(`${NOMBRES[e.k]||e.k} · ${st} · prioridad ${e.prio.toFixed(0)}`).addTo(capViv)})}
+function vFeed(){const fil=$('#vfil2').value;
+  const ids=V.orden.filter(id=>{const st=estV(id);return !fil||(fil==='activo'?!['resuelto','descartado'].includes(st):st===fil)});
+  const n=V.orden.length,res=V.orden.filter(id=>estV(id)==='resuelto').length,act=V.orden.filter(id=>!['resuelto','descartado'].includes(estV(id))).length;
+  $('#vcnt').textContent=n?`${n} eventos · ${act} por atender · ${res} resueltos`:'Sin eventos todavía';
+  $('#vfeed').innerHTML=ids.map(id=>{const e=V.ev[id],st=estV(id),sg=SIG[st];
+   return `<div class="cand" data-id="${id}"><div>${fotoEv(e.f,[e])}</div><div><b>${NOMBRES[e.k]||e.k}</b> <span style="color:var(--mut)">· ${Math.round(e.s*100)}% · visto ${e.vistas} ${e.vistas>1?'veces':'vez'}</span>
+   <small style="display:block;color:var(--mut)">${esc(e.inst)} (${esc(e.tipo_inst)}) a ${e.dist} m · ${e.acc} accidentes cerca</small>
+   <div style="margin-top:3px"><span class="tag">${esc(e.dep)}</span><span class="tag up">prioridad ${e.prio.toFixed(0)}</span><span class="tag" style="background:var(--sunk);color:var(--txt)">${st}</span></div>
+   <div style="display:flex;gap:6px;margin-top:6px;flex-wrap:wrap">${sg?`<button class="btn pri" data-a="${sg[0]}">${sg[1]}</button>`:''}${st==='nuevo'?'<button class="btn" data-a="descartado">Descartar</button>':''}<button class="btn" data-a="ver">Ver en mapa</button></div></div></div>`}).join('')||'<div class="empty">Aquí aparecen las detecciones que manda la cámara.</div>';}
+$('#vfeed').addEventListener('click',e=>{const b=e.target.closest('button[data-a]'),c=e.target.closest('.cand');if(!b||!c)return;const id=c.dataset.id;
+  if(b.dataset.a==='ver'){const ev=V.ev[id];map.setView([ev.la,ev.ln],18);return}
+  V.est[id]=b.dataset.a;store.set('vivo_v1',V.est);vFeed();vMapa();});
+$('#vfil2').onchange=vFeed;
+function procesar(m){
+  if(m.tipo==='reinicio'){vReset();return}
+  if(m.tipo==='pos'){const p=[m.la,m.ln];V.trail.push(p);
+    if(!vMarker){vLine=L.polyline([],{color:css('--info'),weight:4,opacity:.75}).addTo(capViv);vMarker=L.marker(p,{icon:vehIcon(),zIndexOffset:1000}).addTo(capViv).bindTooltip('Vehículo '+esc(m.veh))}
+    vMarker.setLatLng(p);vLine.setLatLngs(V.trail);V.frame={f:m.f,d:[]};$('#vprog').textContent=`Cuadro ${m.n} de ${m.total}`;
+    if($('#p-viv').classList.contains('on'))map.panTo(p,{animate:true});vCuadro();return}
+  if(m.tipo==='det'){const nuevo=!V.ev[m.id];V.ev[m.id]=m;if(nuevo)V.orden.unshift(m.id);
+    if(V.frame&&V.frame.f===m.f)V.frame.d.push(m);vCuadro();vFeed();vMapa();}
+}
+function vReset(){if(V.timer){clearInterval(V.timer);V.timer=null}V.ev={};V.orden=[];V.trail=[];V.frame=null;V.i=0;V.est={};store.set('vivo_v1',{});
+  capViv.clearLayers();vMarker=null;vLine=null;$('#vprog').textContent='';$('#vplay').textContent='▶ Reproducir recorrido';vCuadro();vFeed();}
+function vPlay(){if(V.timer){clearInterval(V.timer);V.timer=null;$('#vplay').textContent='▶ Continuar';return}
+  if(V.i>=D.vivo.length)vReset();$('#vplay').textContent='⏸ Pausa';
+  V.timer=setInterval(()=>{if(V.i>=D.vivo.length){clearInterval(V.timer);V.timer=null;$('#vplay').textContent='↺ Repetir';return}
+    do{procesar(D.vivo[V.i++])}while(V.i<D.vivo.length&&D.vivo[V.i].tipo!=='pos')},1000);}
+$('#vplay').onclick=vPlay;$('#vreset').onclick=vReset;
+function vPoll(){fetch('api/mensajes?desde='+V.desde,{cache:'no-store'}).then(r=>r.json()).then(j=>{V.desde+=j.mensajes.length;j.mensajes.forEach(procesar)}).catch(()=>{})}
+function vivoIniciar(){const rep=()=>{V.srv=false;$('#vst').textContent='Sin conexión al centro de control. Puedes reproducir el recorrido grabado del vehículo, con las detecciones reales del modelo.'};
+  if(!location.protocol.startsWith('http')){rep();vFeed();return}
+  fetch('api/estado',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(()=>{V.srv=true;
+    $('#vst').innerHTML='<b style="color:var(--ok)">● Conectado al centro de control.</b> Las detecciones llegan desde la cámara del vehículo en tiempo real.';
+    $('#vplay').style.display='none';vFeed();vPoll();setInterval(vPoll,1000)}).catch(()=>{rep();vFeed()});}
+
+/* ---------- pestañas, modo, tema ---------- */
+$$('.tabs button').forEach(b=>b.onclick=()=>{$$('.tabs button').forEach(x=>x.setAttribute('aria-selected',x===b));
+  $$('.pane').forEach(p=>p.classList.toggle('on',p.id==='p-'+b.dataset.t));store.set('tab',b.dataset.t);
+  if(b.dataset.t==='val'&&!map.hasLayer(capCand))capCand.addTo(map);graficas();});
+$$('#modo button').forEach(b=>b.onclick=()=>{modo=b.dataset.m;$$('#modo button').forEach(x=>x.setAttribute('aria-pressed',x===b));kpis();lista();});
+$('#tema').onclick=()=>{const r=document.documentElement,osc=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+  r.dataset.theme=osc?'light':'dark';store.set('tema',r.dataset.theme);dibujaInst();dibujaCand();graficas();};
+const t0=store.get('tema',null);if(t0)document.documentElement.dataset.theme=t0;
+
+clima();kpis();dibujaInst();dibujaCand();lista();vlista();graficas();vivoIniciar();
+const tab=store.get('tab','ord');if(tab!=='ord'){const b=document.querySelector(`.tabs button[data-t="${tab}"]`);if(b)b.click();}
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+ "umbrales": {
+  "alcantarilla_riesgo": 0.7,
+  "alcantarilla_tapada": 0.45,
+  "arbol_riesgo": 0.5,
+  "dano_pavimento": 0.45
+ },
+ "alcanza_meta": {
+  "alcantarilla_riesgo": true,
+  "alcantarilla_tapada": true,
+  "arbol_riesgo": false,
+  "dano_pavimento": true
+ },
+ "origen": "evaluar_yolo.py --prueba calibracion_v8: menor umbral con precision>=0.9; arbol no la alcanza con recall util, se usa 0.5 (precision 0.80 en calibracion)",
+ "filtro": true,
+ "umbrales_campo": {
+  "alcantarilla_riesgo": 0.7,
+  "alcantarilla_tapada": 0.45,
+  "arbol_riesgo": 0.5,
+  "dano_pavimento": 0.45
+ }
+}

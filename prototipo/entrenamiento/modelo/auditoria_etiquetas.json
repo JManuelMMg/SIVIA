@@ -1,0 +1,4747 @@
+{
+ "omitida": [
+  {
+   "parte": "train",
+   "img": "alc38_alc_858350344888562.jpg",
+   "clase": "alcantarilla_riesgo",
+   "caja": [
+    124,
+    156,
+    196,
+    164
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "campo_mly_103688619463035.jpg",
+   "clase": "alcantarilla_tapada",
+   "caja": [
+    468,
+    750,
+    568,
+    772
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "campo_mly_1234839234407385.jpg",
+   "clase": "arbol_riesgo",
+   "caja": [
+    290,
+    363,
+    417,
+    556
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "campo_mly_142397084480392.jpg",
+   "clase": "arbol_riesgo",
+   "caja": [
+    464,
+    360,
+    596,
+    438
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "campo_mly_319975999490427.jpg",
+   "clase": "alcantarilla_riesgo",
+   "caja": [
+    318,
+    561,
+    556,
+    622
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "campo_mly_322091525983110.jpg",
+   "clase": "arbol_riesgo",
+   "caja": [
+    236,
+    360,
+    342,
+    423
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "campo_mly_400548232535198.jpg",
+   "clase": "arbol_riesgo",
+   "caja": [
+    379,
+    480,
+    502,
+    545
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "campo_mly_579035701753747.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    388,
+    707,
+    546,
+    772
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_000083.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    452,
+    454,
+    500,
+    473
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_000240.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    136,
+    403,
+    177,
+    419
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_000343.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    217,
+    409,
+    252,
+    436
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_000343.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    176,
+    402,
+    211,
+    429
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_000392.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    188,
+    397,
+    242,
+    413
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_000512.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    321,
+    473,
+    398,
+    522
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_000634.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    141,
+    414,
+    193,
+    430
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_000634.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    186,
+    387,
+    238,
+    403
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_001107.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    279,
+    389,
+    337,
+    413
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_001292.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    337,
+    445,
+    393,
+    525
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_001353.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    273,
+    453,
+    292,
+    471
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_001545.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    225,
+    409,
+    287,
+    436
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_001600.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    409,
+    453,
+    480,
+    525
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_001669.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    192,
+    411,
+    211,
+    432
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_001917.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    277,
+    448,
+    295,
+    472
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_001947.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    360,
+    425,
+    423,
+    449
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_001956.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    212,
+    471,
+    358,
+    499
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_002541.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    184,
+    409,
+    221,
+    435
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_002942.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    176,
+    444,
+    272,
+    491
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_002992.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    340,
+    438,
+    457,
+    527
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_Czech_Czech_003095.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    311,
+    425,
+    341,
+    445
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_000174.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    332,
+    600,
+    563,
+    645
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_000288.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    98,
+    545,
+    261,
+    660
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_000298.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    210,
+    483,
+    298,
+    572
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_000301.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    371,
+    588,
+    405,
+    611
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_000301.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    432,
+    637,
+    604,
+    683
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_000431.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    189,
+    536,
+    279,
+    608
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_000456.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    141,
+    661,
+    189,
+    702
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_000470.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    1,
+    526,
+    60,
+    565
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_000591.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    188,
+    570,
+    339,
+    647
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_000659.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    450,
+    561,
+    489,
+    584
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_000811.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    1,
+    681,
+    187,
+    720
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_000831.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    241,
+    597,
+    276,
+    629
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_000857.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    321,
+    540,
+    392,
+    569
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_000864.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    1,
+    506,
+    191,
+    720
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_000873.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    209,
+    529,
+    324,
+    585
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_000969.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    169,
+    661,
+    279,
+    720
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_000979.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    364,
+    661,
+    536,
+    720
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_001058.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    506,
+    505,
+    575,
+    543
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_001068.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    329,
+    542,
+    683,
+    667
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_001251.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    171,
+    602,
+    290,
+    633
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_001262.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    183,
+    317,
+    270,
+    386
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_001516.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    658,
+    616,
+    720,
+    660
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_001567.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    289,
+    581,
+    619,
+    692
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_001585.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    409,
+    565,
+    442,
+    594
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_001596.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    621,
+    585,
+    676,
+    617
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_001767.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    131,
+    520,
+    343,
+    657
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_002020.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    10,
+    612,
+    86,
+    650
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_002064.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    356,
+    429,
+    403,
+    463
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_002087.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    38,
+    522,
+    100,
+    551
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_002087.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    201,
+    556,
+    276,
+    634
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_002201.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    293,
+    693,
+    334,
+    720
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_002249.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    503,
+    536,
+    565,
+    576
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_002340.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    22,
+    616,
+    174,
+    706
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_002376.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    467,
+    308,
+    511,
+    361
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_002405.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    445,
+    431,
+    479,
+    460
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_002498.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    232,
+    582,
+    351,
+    642
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_002498.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    374,
+    549,
+    493,
+    609
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_002573.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    223,
+    594,
+    261,
+    626
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_002593.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    450,
+    561,
+    557,
+    645
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_002658.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    385,
+    502,
+    527,
+    535
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_002901.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    524,
+    536,
+    720,
+    645
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_002945.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    200,
+    503,
+    236,
+    526
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_002973.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    564,
+    614,
+    610,
+    633
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_003049.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    93,
+    595,
+    258,
+    720
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_003049.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    248,
+    517,
+    329,
+    590
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_003100.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    113,
+    588,
+    201,
+    652
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_003251.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    552,
+    663,
+    638,
+    696
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_003384.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    331,
+    525,
+    414,
+    589
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_003446.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    589,
+    518,
+    669,
+    586
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_003542.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    555,
+    676,
+    607,
+    706
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_003542.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    293,
+    654,
+    386,
+    702
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_003550.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    5,
+    389,
+    82,
+    500
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_003741.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    1,
+    651,
+    67,
+    676
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_003741.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    156,
+    597,
+    223,
+    622
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_003923.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    462,
+    497,
+    506,
+    519
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_004108.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    254,
+    608,
+    331,
+    715
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_004293.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    334,
+    348,
+    490,
+    429
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_004321.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    451,
+    425,
+    527,
+    459
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_004370.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    192,
+    483,
+    277,
+    507
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_004434.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    206,
+    465,
+    233,
+    485
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_004434.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    444,
+    422,
+    507,
+    474
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_004512.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    458,
+    534,
+    533,
+    614
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_004719.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    216,
+    537,
+    283,
+    574
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_004724.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    391,
+    501,
+    463,
+    580
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_004801.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    430,
+    601,
+    720,
+    717
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_004984.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    228,
+    486,
+    310,
+    522
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_005014.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    386,
+    588,
+    451,
+    623
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_005022.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    543,
+    517,
+    585,
+    535
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_005022.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    655,
+    579,
+    697,
+    597
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_005231.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    524,
+    597,
+    569,
+    659
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_005245.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    274,
+    328,
+    359,
+    378
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_005247.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    1,
+    454,
+    110,
+    523
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_005374.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    314,
+    421,
+    621,
+    538
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_005489.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    280,
+    332,
+    324,
+    348
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_005490.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    313,
+    594,
+    374,
+    640
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_005661.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    383,
+    523,
+    463,
+    557
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_005746.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    219,
+    216,
+    270,
+    247
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_005781.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    410,
+    521,
+    444,
+    542
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_005859.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    257,
+    520,
+    344,
+    583
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_005954.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    590,
+    491,
+    713,
+    588
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_005964.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    349,
+    510,
+    503,
+    614
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_005970.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    515,
+    458,
+    659,
+    589
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_005994.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    1,
+    550,
+    202,
+    720
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_006100.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    19,
+    538,
+    181,
+    694
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_006103.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    179,
+    462,
+    252,
+    490
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_006114.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    186,
+    557,
+    249,
+    622
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_006115.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    175,
+    581,
+    264,
+    648
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_006177.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    33,
+    561,
+    146,
+    678
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_006187.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    277,
+    604,
+    411,
+    683
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_006212.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    270,
+    416,
+    387,
+    489
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_006290.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    401,
+    505,
+    449,
+    594
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_006388.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    261,
+    582,
+    304,
+    608
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_006529.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    506,
+    578,
+    564,
+    629
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_006622.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    452,
+    652,
+    515,
+    704
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_006630.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    410,
+    475,
+    452,
+    507
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_006630.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    387,
+    520,
+    429,
+    552
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_006768.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    149,
+    399,
+    204,
+    430
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_006912.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    140,
+    451,
+    246,
+    523
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_006920.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    380,
+    573,
+    413,
+    601
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_006967.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    566,
+    573,
+    605,
+    598
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_006973.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    486,
+    499,
+    518,
+    528
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_006973.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    548,
+    570,
+    580,
+    599
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_007137.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    182,
+    461,
+    288,
+    537
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_007309.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    413,
+    474,
+    447,
+    507
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_007417.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    154,
+    569,
+    276,
+    710
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_007806.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    332,
+    496,
+    375,
+    541
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_008022.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    262,
+    595,
+    298,
+    627
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_008105.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    13,
+    633,
+    95,
+    678
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_008336.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    38,
+    570,
+    160,
+    644
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_008597.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    403,
+    179,
+    474,
+    213
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_008597.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    356,
+    132,
+    427,
+    166
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_008609.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    145,
+    524,
+    240,
+    559
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_008632.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    290,
+    569,
+    342,
+    611
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_008673.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    133,
+    677,
+    180,
+    706
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_008704.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    402,
+    421,
+    443,
+    510
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_008927.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    423,
+    425,
+    481,
+    454
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_009009.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    34,
+    603,
+    117,
+    659
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_009142.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    394,
+    572,
+    509,
+    618
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_009157.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    419,
+    515,
+    494,
+    582
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_009173.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    405,
+    293,
+    565,
+    426
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_009254.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    1,
+    456,
+    295,
+    583
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_009254.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    2,
+    586,
+    179,
+    715
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_009254.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    532,
+    505,
+    614,
+    574
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_009340.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    375,
+    373,
+    488,
+    463
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_009553.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    430,
+    459,
+    638,
+    610
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_009678.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    264,
+    501,
+    366,
+    556
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_009691.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    440,
+    645,
+    618,
+    720
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_009691.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    509,
+    554,
+    610,
+    633
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_009815.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    130,
+    507,
+    452,
+    671
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_009830.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    494,
+    641,
+    532,
+    682
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_000083.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    339,
+    548,
+    425,
+    640
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_000967.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    295,
+    352,
+    341,
+    408
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_001072.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    129,
+    409,
+    167,
+    426
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_001072.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    269,
+    527,
+    331,
+    583
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_001083.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    183,
+    441,
+    204,
+    455
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_001125.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    256,
+    377,
+    308,
+    471
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_001149.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    455,
+    535,
+    513,
+    583
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_001340.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    73,
+    472,
+    191,
+    640
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_001436.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    500,
+    453,
+    640,
+    527
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_001868.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    118,
+    585,
+    245,
+    640
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_001940.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    192,
+    536,
+    272,
+    600
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_002262.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    466,
+    371,
+    489,
+    383
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_002309.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    547,
+    495,
+    640,
+    565
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_002335.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    468,
+    585,
+    630,
+    639
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_002374.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    24,
+    413,
+    118,
+    618
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_002467.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    352,
+    611,
+    372,
+    632
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_002496.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    337,
+    548,
+    362,
+    561
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_002513.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    384,
+    506,
+    414,
+    526
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_002631.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    17,
+    514,
+    189,
+    640
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_002854.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    464,
+    541,
+    562,
+    634
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_003186.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    370,
+    441,
+    417,
+    458
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_003582.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    136,
+    385,
+    206,
+    435
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_003626.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    201,
+    447,
+    463,
+    640
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_004097.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    189,
+    552,
+    231,
+    623
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_004277.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    266,
+    565,
+    414,
+    639
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_004342.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    465,
+    594,
+    635,
+    640
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_004540.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    340,
+    513,
+    388,
+    539
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_004714.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    464,
+    419,
+    640,
+    516
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_alcantarilla_02120.jpg",
+   "clase": "alcantarilla_riesgo",
+   "caja": [
+    118,
+    162,
+    237,
+    194
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00024.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    157,
+    477,
+    237,
+    511
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00028.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    45,
+    410,
+    96,
+    429
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00111.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    463,
+    404,
+    506,
+    439
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00135.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    184,
+    546,
+    263,
+    603
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00135.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    279,
+    548,
+    387,
+    600
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00135.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    235,
+    481,
+    343,
+    533
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00135.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    354,
+    486,
+    441,
+    536
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00142.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    42,
+    453,
+    74,
+    474
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00144.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    174,
+    440,
+    217,
+    472
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00148.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    332,
+    356,
+    384,
+    387
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00161.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    39,
+    527,
+    82,
+    550
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00168.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    197,
+    368,
+    261,
+    417
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00171.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    200,
+    404,
+    234,
+    426
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00172.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    78,
+    313,
+    640,
+    636
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00172.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    393,
+    268,
+    452,
+    305
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00174.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    85,
+    512,
+    139,
+    540
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00179.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    509,
+    441,
+    540,
+    458
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00188.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    357,
+    523,
+    393,
+    561
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00191.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    356,
+    603,
+    388,
+    634
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00194.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    1,
+    556,
+    69,
+    616
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00208.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    315,
+    480,
+    365,
+    502
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00212.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    8,
+    525,
+    130,
+    610
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00212.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    237,
+    551,
+    359,
+    636
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00215.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    574,
+    452,
+    640,
+    487
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00235.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    332,
+    404,
+    401,
+    482
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00237.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    479,
+    580,
+    553,
+    634
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00246.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    100,
+    497,
+    172,
+    536
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00253.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    252,
+    484,
+    282,
+    510
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00255.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    194,
+    474,
+    302,
+    525
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00297.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    425,
+    500,
+    445,
+    522
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00299.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    603,
+    465,
+    638,
+    506
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00319.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    408,
+    532,
+    441,
+    569
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00321.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    180,
+    570,
+    318,
+    640
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00338.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    386,
+    462,
+    431,
+    491
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00352.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    258,
+    461,
+    386,
+    535
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00352.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    387,
+    496,
+    487,
+    544
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00356.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    83,
+    540,
+    202,
+    636
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00395.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    250,
+    504,
+    345,
+    578
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00423.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    259,
+    447,
+    346,
+    475
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00423.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    204,
+    429,
+    252,
+    462
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00435.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    125,
+    512,
+    289,
+    562
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00435.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    1,
+    549,
+    69,
+    628
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00435.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    169,
+    421,
+    240,
+    470
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00435.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    391,
+    444,
+    433,
+    468
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00469.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    160,
+    468,
+    208,
+    503
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00469.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    219,
+    458,
+    319,
+    571
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00499.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    317,
+    548,
+    396,
+    577
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00504.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    339,
+    381,
+    378,
+    399
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00504.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    325,
+    407,
+    345,
+    425
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00512.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    332,
+    494,
+    407,
+    566
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00527.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    218,
+    521,
+    364,
+    593
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00530.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    119,
+    537,
+    204,
+    600
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00544.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    388,
+    493,
+    457,
+    556
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00547.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    437,
+    565,
+    498,
+    635
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00555.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    259,
+    282,
+    307,
+    317
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00573.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    445,
+    461,
+    503,
+    479
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00573.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    340,
+    430,
+    415,
+    455
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00590.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    142,
+    504,
+    218,
+    539
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00595.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    15,
+    464,
+    74,
+    504
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00597.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    393,
+    581,
+    458,
+    608
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00607.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    257,
+    413,
+    365,
+    458
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00617.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    464,
+    462,
+    499,
+    487
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00630.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    242,
+    430,
+    326,
+    490
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00643.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    60,
+    548,
+    162,
+    609
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00651.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    219,
+    494,
+    322,
+    534
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00651.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    1,
+    428,
+    35,
+    458
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00665.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    401,
+    428,
+    442,
+    446
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00668.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    497,
+    555,
+    526,
+    580
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00671.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    504,
+    320,
+    572,
+    350
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00683.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    31,
+    400,
+    187,
+    487
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00683.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    197,
+    399,
+    275,
+    432
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00683.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    248,
+    369,
+    326,
+    402
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00695.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    278,
+    541,
+    324,
+    581
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00707.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    465,
+    528,
+    495,
+    547
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00721.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    171,
+    484,
+    256,
+    543
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00722.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    395,
+    446,
+    429,
+    466
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00741.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    510,
+    527,
+    570,
+    565
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00750.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    93,
+    552,
+    202,
+    619
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00750.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    1,
+    564,
+    90,
+    632
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00799.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    339,
+    385,
+    393,
+    415
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00810.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    300,
+    545,
+    392,
+    624
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00819.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    348,
+    375,
+    407,
+    404
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00819.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    307,
+    484,
+    476,
+    522
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00833.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    498,
+    269,
+    640,
+    322
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00833.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    229,
+    236,
+    303,
+    338
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00865.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    0,
+    432,
+    52,
+    524
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00866.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    410,
+    428,
+    445,
+    447
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00889.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    302,
+    452,
+    335,
+    470
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00890.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    89,
+    500,
+    189,
+    568
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00905.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    421,
+    458,
+    465,
+    482
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00917.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    42,
+    502,
+    255,
+    640
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00931.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    3,
+    497,
+    50,
+    526
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00933.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    372,
+    497,
+    426,
+    621
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00960.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    480,
+    561,
+    504,
+    575
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00963.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    45,
+    552,
+    65,
+    597
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00970.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    109,
+    561,
+    133,
+    579
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00970.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    158,
+    485,
+    182,
+    510
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00978.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    452,
+    515,
+    486,
+    533
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_01037.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    415,
+    581,
+    479,
+    634
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_01070.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    17,
+    556,
+    115,
+    619
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_01103.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    65,
+    443,
+    90,
+    457
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_grieta_01138.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    46,
+    442,
+    135,
+    511
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_grieta_01213.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    328,
+    568,
+    449,
+    626
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_grieta_01237.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    123,
+    528,
+    167,
+    569
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_grieta_01237.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    435,
+    508,
+    503,
+    546
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_grieta_01237.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    175,
+    498,
+    291,
+    549
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_grieta_01250.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    124,
+    520,
+    194,
+    595
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_grieta_01250.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    156,
+    468,
+    216,
+    524
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_grieta_01306.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    100,
+    462,
+    150,
+    519
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_grieta_01326.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    1,
+    441,
+    159,
+    505
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_grieta_01326.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    194,
+    429,
+    307,
+    481
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_grieta_01374.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    266,
+    543,
+    386,
+    640
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_grieta_01380.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    370,
+    442,
+    484,
+    532
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_grieta_01419.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    159,
+    554,
+    392,
+    640
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_grieta_01506.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    82,
+    500,
+    174,
+    628
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_Czech_Czech_002420.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    201,
+    491,
+    226,
+    515
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_Czech_Czech_002420.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    222,
+    441,
+    247,
+    465
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_001145.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    370,
+    212,
+    400,
+    242
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_001145.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    272,
+    187,
+    302,
+    217
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_001294.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    201,
+    553,
+    407,
+    616
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_001932.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    497,
+    526,
+    542,
+    566
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_002345.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    119,
+    558,
+    247,
+    688
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_003013.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    42,
+    482,
+    127,
+    521
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_003373.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    88,
+    570,
+    168,
+    651
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_003512.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    303,
+    582,
+    423,
+    608
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_004065.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    434,
+    539,
+    505,
+    572
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_004201.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    224,
+    594,
+    289,
+    659
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_004483.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    278,
+    601,
+    434,
+    716
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_004899.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    263,
+    121,
+    302,
+    181
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_005546.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    339,
+    489,
+    367,
+    513
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_005578.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    343,
+    492,
+    373,
+    518
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_006640.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    9,
+    608,
+    46,
+    633
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_006640.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    55,
+    601,
+    92,
+    626
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_006691.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    303,
+    386,
+    333,
+    414
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_007354.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    92,
+    561,
+    338,
+    715
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_007538.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    329,
+    601,
+    503,
+    690
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_008297.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    297,
+    565,
+    358,
+    601
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_008563.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    535,
+    491,
+    702,
+    537
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_008563.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    526,
+    509,
+    720,
+    669
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_008712.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    427,
+    501,
+    482,
+    543
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_United_States_United_States_000696.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    115,
+    493,
+    185,
+    639
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_United_States_United_States_003057.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    451,
+    504,
+    582,
+    640
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_United_States_United_States_003532.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    320,
+    493,
+    590,
+    631
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_United_States_United_States_004253.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    445,
+    505,
+    509,
+    533
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_United_States_United_States_004261.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    218,
+    541,
+    381,
+    640
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_United_States_United_States_004549.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    318,
+    462,
+    360,
+    493
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_01878.jpg",
+   "clase": "alcantarilla_riesgo",
+   "caja": [
+    108,
+    142,
+    212,
+    178
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_02007.jpg",
+   "clase": "alcantarilla_tapada",
+   "caja": [
+    108,
+    150,
+    212,
+    170
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_02065.jpg",
+   "clase": "alcantarilla_riesgo",
+   "caja": [
+    116,
+    149,
+    204,
+    171
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_02067.jpg",
+   "clase": "alcantarilla_riesgo",
+   "caja": [
+    147,
+    204,
+    294,
+    237
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_02068.jpg",
+   "clase": "alcantarilla_tapada",
+   "caja": [
+    174,
+    218,
+    349,
+    305
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_02077.jpg",
+   "clase": "alcantarilla_riesgo",
+   "caja": [
+    156,
+    212,
+    313,
+    258
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_02082.jpg",
+   "clase": "alcantarilla_riesgo",
+   "caja": [
+    198,
+    261,
+    396,
+    333
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_02098.jpg",
+   "clase": "alcantarilla_riesgo",
+   "caja": [
+    199,
+    290,
+    398,
+    308
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_02133.jpg",
+   "clase": "alcantarilla_riesgo",
+   "caja": [
+    114,
+    148,
+    206,
+    172
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_02143.jpg",
+   "clase": "alcantarilla_riesgo",
+   "caja": [
+    125,
+    153,
+    195,
+    167
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_02238.jpg",
+   "clase": "alcantarilla_tapada",
+   "caja": [
+    82,
+    240,
+    266,
+    313
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_02240.jpg",
+   "clase": "alcantarilla_tapada",
+   "caja": [
+    113,
+    150,
+    207,
+    170
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_02258.jpg",
+   "clase": "alcantarilla_tapada",
+   "caja": [
+    131,
+    156,
+    189,
+    164
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_02272.jpg",
+   "clase": "alcantarilla_tapada",
+   "caja": [
+    120,
+    165,
+    239,
+    193
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_arbol_02503.jpg",
+   "clase": "arbol_riesgo",
+   "caja": [
+    474,
+    22,
+    602,
+    94
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_arbol_02657.jpg",
+   "clase": "arbol_riesgo",
+   "caja": [
+    218,
+    22,
+    308,
+    116
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_arbol_02660.jpg",
+   "clase": "arbol_riesgo",
+   "caja": [
+    320,
+    94,
+    486,
+    144
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_arbol_02671.jpg",
+   "clase": "arbol_riesgo",
+   "caja": [
+    154,
+    86,
+    295,
+    144
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_arbol_02694.jpg",
+   "clase": "arbol_riesgo",
+   "caja": [
+    51,
+    151,
+    115,
+    273
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_arbol_02762.jpg",
+   "clase": "arbol_riesgo",
+   "caja": [
+    38,
+    0,
+    294,
+    67
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00089.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    289,
+    417,
+    329,
+    436
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00098.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    329,
+    409,
+    365,
+    441
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00110.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    37,
+    402,
+    102,
+    435
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00145.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    380,
+    517,
+    463,
+    609
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00223.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    107,
+    402,
+    152,
+    431
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00249.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    154,
+    379,
+    214,
+    416
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00279.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    297,
+    415,
+    405,
+    493
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00286.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    202,
+    488,
+    235,
+    511
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00291.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    159,
+    427,
+    208,
+    452
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00340.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    208,
+    340,
+    460,
+    628
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00349.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    208,
+    457,
+    263,
+    482
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00429.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    364,
+    478,
+    424,
+    510
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00446.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    240,
+    572,
+    307,
+    640
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00446.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    263,
+    529,
+    307,
+    573
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00464.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    311,
+    449,
+    346,
+    509
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00480.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    117,
+    587,
+    238,
+    640
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00486.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    260,
+    412,
+    508,
+    464
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00535.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    465,
+    359,
+    504,
+    384
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00581.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    481,
+    542,
+    554,
+    586
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00596.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    150,
+    516,
+    211,
+    538
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00596.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    117,
+    501,
+    465,
+    585
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00634.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    45,
+    507,
+    137,
+    567
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00634.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    25,
+    580,
+    117,
+    640
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00705.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    295,
+    429,
+    329,
+    457
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00705.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    167,
+    529,
+    223,
+    558
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00705.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    11,
+    572,
+    125,
+    625
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00751.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    319,
+    444,
+    351,
+    496
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00830.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    281,
+    392,
+    369,
+    455
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00830.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    148,
+    448,
+    256,
+    640
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00830.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    363,
+    457,
+    499,
+    555
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00838.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    283,
+    343,
+    322,
+    365
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00851.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    454,
+    443,
+    640,
+    524
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00860.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    427,
+    348,
+    531,
+    444
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00878.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    282,
+    458,
+    328,
+    518
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00879.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    395,
+    436,
+    416,
+    454
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00937.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    212,
+    444,
+    262,
+    480
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00937.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    268,
+    404,
+    318,
+    440
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00993.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    352,
+    387,
+    382,
+    406
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_01043.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    438,
+    552,
+    476,
+    579
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_01049.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    271,
+    498,
+    287,
+    516
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_01090.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    61,
+    514,
+    90,
+    534
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_grieta_01242.jpg",
+   "clase": "dano_pavimento",
+   "caja": [
+    457,
+    489,
+    640,
+    613
+   ]
+  }
+ ],
+ "sin_etiqueta": [
+  {
+   "parte": "train",
+   "img": "campo_mly_24435560232702163.jpg",
+   "clase": "arbol_riesgo",
+   "conf": 0.828,
+   "caja": [
+    546,
+    84,
+    827,
+    259
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "campo_mly_449086791452176.jpg",
+   "clase": "arbol_riesgo",
+   "conf": 0.643,
+   "caja": [
+    407,
+    31,
+    863,
+    173
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "campo_mly_728522163253494.jpg",
+   "clase": "arbol_riesgo",
+   "conf": 0.757,
+   "caja": [
+    106,
+    12,
+    430,
+    181
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_India_India_009832.jpg",
+   "clase": "dano_pavimento",
+   "conf": 0.626,
+   "caja": [
+    4,
+    481,
+    444,
+    720
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_000620.jpg",
+   "clase": "dano_pavimento",
+   "conf": 0.699,
+   "caja": [
+    0,
+    404,
+    136,
+    622
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_001456.jpg",
+   "clase": "dano_pavimento",
+   "conf": 0.613,
+   "caja": [
+    225,
+    381,
+    640,
+    640
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_001681.jpg",
+   "clase": "dano_pavimento",
+   "conf": 0.689,
+   "caja": [
+    0,
+    397,
+    172,
+    628
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "rdd_United_States_United_States_002309.jpg",
+   "clase": "dano_pavimento",
+   "conf": 0.603,
+   "caja": [
+    92,
+    361,
+    640,
+    640
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_alcantarilla_01847.jpg",
+   "clase": "alcantarilla_tapada",
+   "conf": 0.73,
+   "caja": [
+    131,
+    189,
+    206,
+    205
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_alcantarilla_01850.jpg",
+   "clase": "alcantarilla_tapada",
+   "conf": 0.657,
+   "caja": [
+    154,
+    202,
+    229,
+    217
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_arbol_02436.jpg",
+   "clase": "arbol_riesgo",
+   "conf": 0.61,
+   "caja": [
+    0,
+    0,
+    156,
+    102
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_arbol_recorte_02475.jpg",
+   "clase": "arbol_riesgo",
+   "conf": 0.73,
+   "caja": [
+    546,
+    160,
+    640,
+    291
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_arbol_recorte_02625.jpg",
+   "clase": "arbol_riesgo",
+   "conf": 0.666,
+   "caja": [
+    482,
+    0,
+    640,
+    178
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_00645.jpg",
+   "clase": "dano_pavimento",
+   "conf": 0.62,
+   "caja": [
+    424,
+    531,
+    515,
+    577
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_01045.jpg",
+   "clase": "dano_pavimento",
+   "conf": 0.632,
+   "caja": [
+    33,
+    424,
+    166,
+    606
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_01053.jpg",
+   "clase": "dano_pavimento",
+   "conf": 0.737,
+   "caja": [
+    190,
+    386,
+    302,
+    553
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_fondo_01653.jpg",
+   "clase": "dano_pavimento",
+   "conf": 0.624,
+   "caja": [
+    104,
+    410,
+    278,
+    640
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_fondo_01739.jpg",
+   "clase": "dano_pavimento",
+   "conf": 0.611,
+   "caja": [
+    432,
+    438,
+    640,
+    634
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_fondo_01750.jpg",
+   "clase": "dano_pavimento",
+   "conf": 0.688,
+   "caja": [
+    6,
+    387,
+    605,
+    621
+   ]
+  },
+  {
+   "parte": "train",
+   "img": "v2_rdd_grieta_01166.jpg",
+   "clase": "dano_pavimento",
+   "conf": 0.604,
+   "caja": [
+    212,
+    454,
+    322,
+    499
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "rdd_India_India_006581.jpg",
+   "clase": "dano_pavimento",
+   "conf": 0.724,
+   "caja": [
+    553,
+    572,
+    679,
+    632
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_01848.jpg",
+   "clase": "alcantarilla_tapada",
+   "conf": 0.737,
+   "caja": [
+    102,
+    177,
+    177,
+    193
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_01878.jpg",
+   "clase": "alcantarilla_tapada",
+   "conf": 0.823,
+   "caja": [
+    107,
+    139,
+    216,
+    180
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_01999.jpg",
+   "clase": "alcantarilla_tapada",
+   "conf": 0.652,
+   "caja": [
+    58,
+    197,
+    148,
+    216
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_02057.jpg",
+   "clase": "alcantarilla_tapada",
+   "conf": 0.604,
+   "caja": [
+    31,
+    162,
+    139,
+    194
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_02065.jpg",
+   "clase": "alcantarilla_tapada",
+   "conf": 0.702,
+   "caja": [
+    116,
+    146,
+    205,
+    170
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_02077.jpg",
+   "clase": "alcantarilla_tapada",
+   "conf": 0.679,
+   "caja": [
+    2,
+    199,
+    320,
+    381
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_02223.jpg",
+   "clase": "alcantarilla_tapada",
+   "conf": 0.643,
+   "caja": [
+    2,
+    166,
+    95,
+    190
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_alcantarilla_02240.jpg",
+   "clase": "alcantarilla_riesgo",
+   "conf": 0.766,
+   "caja": [
+    111,
+    140,
+    207,
+    177
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_negativo_calle_02566.jpg",
+   "clase": "arbol_riesgo",
+   "conf": 0.755,
+   "caja": [
+    412,
+    1,
+    527,
+    193
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00302.jpg",
+   "clase": "dano_pavimento",
+   "conf": 0.622,
+   "caja": [
+    467,
+    471,
+    627,
+    556
+   ]
+  },
+  {
+   "parte": "val",
+   "img": "v2_rdd_00667.jpg",
+   "clase": "dano_pavimento",
+   "conf": 0.604,
+   "caja": [
+    366,
+    544,
+    430,
+    582
+   ]
+  }
+ ],
+ "imagenes": 4415
+}

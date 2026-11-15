@@ -1,0 +1,23 @@
+{
+ "umbrales": {
+  "alcantarilla_riesgo": 0.6,
+  "alcantarilla_tapada": 0.45,
+  "arbol_riesgo": 0.55,
+  "dano_pavimento": 0.4
+ },
+ "alcanza_meta": {
+  "alcantarilla_riesgo": true,
+  "alcantarilla_tapada": true,
+  "arbol_riesgo": true,
+  "dano_pavimento": true
+ },
+ "origen": "evaluar_yolo.py --prueba calibracion: menor umbral con precision>=0.9 en la validacion v5 (974 imagenes, nunca usadas para entrenar ni para la prueba)",
+ "filtro": true,
+ "umbrales_campo": {
+  "alcantarilla_riesgo": 0.6,
+  "alcantarilla_tapada": 0.45,
+  "arbol_riesgo": 0.55,
+  "dano_pavimento": 0.4
+ },
+ "nota_campo": "Revision a mano en 133 instituciones reservadas (nunca usadas para entrenar): con estos umbrales 5 de 17 candidatos fueron reales (pavimento 1/2, rejillas 2/7, arbol 2/8); la v4f daba 10 de 20. Toda deteccion pasa por validacion humana."
+}

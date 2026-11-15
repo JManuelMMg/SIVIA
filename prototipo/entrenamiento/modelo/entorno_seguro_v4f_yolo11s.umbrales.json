@@ -1,0 +1,23 @@
+{
+ "umbrales": {
+  "alcantarilla_riesgo": 0.3,
+  "alcantarilla_tapada": 0.25,
+  "arbol_riesgo": 0.6,
+  "dano_pavimento": 0.3
+ },
+ "alcanza_meta": {
+  "alcantarilla_riesgo": false,
+  "alcantarilla_tapada": false,
+  "arbol_riesgo": true,
+  "dano_pavimento": true
+ },
+ "origen": "evaluar_yolo.py --filtro: menor umbral con precision>=0.9 en 261 imagenes no vistas; si no se alcanza, el de mejor F1",
+ "filtro": true,
+ "umbrales_campo": {
+  "alcantarilla_riesgo": 0.35,
+  "alcantarilla_tapada": 0.35,
+  "arbol_riesgo": 0.6,
+  "dano_pavimento": 0.3
+ },
+ "nota_campo": "Revision a mano en 133 instituciones reservadas (nunca usadas para entrenar): con estos umbrales 10 de 20 candidatos fueron reales (pavimento 3/4, rejillas 5/11, arbol 2/5). Subir mas el umbral no separa los falsos (rejillas de ventilacion del tablero del auto), por eso toda deteccion pasa por validacion humana."
+}

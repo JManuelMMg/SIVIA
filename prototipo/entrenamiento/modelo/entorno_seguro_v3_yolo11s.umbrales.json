@@ -1,0 +1,22 @@
+{
+ "umbrales": {
+  "alcantarilla_riesgo": 0.1,
+  "alcantarilla_tapada": 0.35,
+  "arbol_riesgo": 0.5,
+  "dano_pavimento": 0.4
+ },
+ "origen": "evaluar_yolo.py: menor umbral con precision>=0.9 en 261 imagenes no vistas; si no se alcanza, el de mejor F1",
+ "alcanza_meta": {
+  "alcantarilla_riesgo": false,
+  "alcantarilla_tapada": false,
+  "arbol_riesgo": true,
+  "dano_pavimento": true
+ },
+ "umbrales_campo": {
+  "alcantarilla_riesgo": 0.35,
+  "alcantarilla_tapada": 0.5,
+  "arbol_riesgo": 0.8,
+  "dano_pavimento": 0.4
+ },
+ "nota_campo": "Imagenes de calle (Mapillary) difieren del conjunto de prueba: tras revision visual se suben los umbrales de arbol (0.8) y alcantarillas para reducir falsos positivos."
+}

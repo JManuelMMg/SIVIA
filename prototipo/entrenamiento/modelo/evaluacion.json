@@ -1,0 +1,560 @@
+{
+ "completo": {
+  "entorno_seguro_7clases.lite": {
+   "alcantarilla_riesgo": {
+    "precision": 0.167,
+    "recall": 0.059,
+    "f1": 0.087,
+    "tp": 2,
+    "fp": 10,
+    "fn": 32
+   },
+   "alcantarilla_tapada": {
+    "precision": 0.462,
+    "recall": 0.473,
+    "f1": 0.467,
+    "tp": 43,
+    "fp": 50,
+    "fn": 48
+   },
+   "arbol_riesgo": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 79
+   },
+   "bache": {
+    "precision": 0.312,
+    "recall": 0.596,
+    "f1": 0.409,
+    "tp": 233,
+    "fp": 514,
+    "fn": 158
+   },
+   "grieta_cocodrilo": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 157
+   },
+   "general": {
+    "precision": 0.326,
+    "recall": 0.37,
+    "f1": 0.347
+   }
+  },
+  "entorno_seguro_v2b_lr005.lite": {
+   "alcantarilla_riesgo": {
+    "precision": 0.217,
+    "recall": 0.147,
+    "f1": 0.175,
+    "tp": 5,
+    "fp": 18,
+    "fn": 29
+   },
+   "alcantarilla_tapada": {
+    "precision": 0.578,
+    "recall": 0.407,
+    "f1": 0.477,
+    "tp": 37,
+    "fp": 27,
+    "fn": 54
+   },
+   "arbol_riesgo": {
+    "precision": 0.5,
+    "recall": 0.038,
+    "f1": 0.071,
+    "tp": 3,
+    "fp": 3,
+    "fn": 76
+   },
+   "bache": {
+    "precision": 0.241,
+    "recall": 0.514,
+    "f1": 0.328,
+    "tp": 201,
+    "fp": 633,
+    "fn": 190
+   },
+   "grieta_cocodrilo": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 157
+   },
+   "general": {
+    "precision": 0.265,
+    "recall": 0.327,
+    "f1": 0.293
+   }
+  },
+  "entorno_seguro_v3_fomo4.lite": {
+   "alcantarilla_riesgo": {
+    "precision": 0.111,
+    "recall": 0.029,
+    "f1": 0.047,
+    "tp": 1,
+    "fp": 8,
+    "fn": 33
+   },
+   "alcantarilla_tapada": {
+    "precision": 0.461,
+    "recall": 0.451,
+    "f1": 0.456,
+    "tp": 41,
+    "fp": 48,
+    "fn": 50
+   },
+   "arbol_riesgo": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 79
+   },
+   "bache": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 391
+   },
+   "dano_pavimento": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 375,
+    "fn": 0
+   },
+   "grieta_cocodrilo": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 157
+   },
+   "general": {
+    "precision": 0.089,
+    "recall": 0.056,
+    "f1": 0.069
+   }
+  },
+  "entorno_seguro_v2a_lr001.lite": {
+   "alcantarilla_riesgo": {
+    "precision": 0.069,
+    "recall": 0.059,
+    "f1": 0.063,
+    "tp": 2,
+    "fp": 27,
+    "fn": 32
+   },
+   "alcantarilla_tapada": {
+    "precision": 0.677,
+    "recall": 0.231,
+    "f1": 0.344,
+    "tp": 21,
+    "fp": 10,
+    "fn": 70
+   },
+   "arbol_riesgo": {
+    "precision": 0.667,
+    "recall": 0.025,
+    "f1": 0.049,
+    "tp": 2,
+    "fp": 1,
+    "fn": 77
+   },
+   "bache": {
+    "precision": 0.486,
+    "recall": 0.35,
+    "f1": 0.407,
+    "tp": 137,
+    "fp": 145,
+    "fn": 254
+   },
+   "grieta_cocodrilo": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 157
+   },
+   "general": {
+    "precision": 0.47,
+    "recall": 0.215,
+    "f1": 0.295
+   }
+  }
+ },
+ "limpio": {
+  "entorno_seguro_7clases.lite": {
+   "alcantarilla_riesgo": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 3,
+    "fn": 14
+   },
+   "alcantarilla_tapada": {
+    "precision": 0.5,
+    "recall": 0.593,
+    "f1": 0.542,
+    "tp": 16,
+    "fp": 16,
+    "fn": 11
+   },
+   "arbol_riesgo": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 55
+   },
+   "bache": {
+    "precision": 0.249,
+    "recall": 0.551,
+    "f1": 0.343,
+    "tp": 49,
+    "fp": 148,
+    "fn": 40
+   },
+   "grieta_cocodrilo": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 95
+   },
+   "general": {
+    "precision": 0.28,
+    "recall": 0.232,
+    "f1": 0.254
+   }
+  },
+  "entorno_seguro_v2b_lr005.lite": {
+   "alcantarilla_riesgo": {
+    "precision": 0.125,
+    "recall": 0.071,
+    "f1": 0.091,
+    "tp": 1,
+    "fp": 7,
+    "fn": 13
+   },
+   "alcantarilla_tapada": {
+    "precision": 0.591,
+    "recall": 0.481,
+    "f1": 0.531,
+    "tp": 13,
+    "fp": 9,
+    "fn": 14
+   },
+   "arbol_riesgo": {
+    "precision": 0.333,
+    "recall": 0.018,
+    "f1": 0.034,
+    "tp": 1,
+    "fp": 2,
+    "fn": 54
+   },
+   "bache": {
+    "precision": 0.212,
+    "recall": 0.517,
+    "f1": 0.301,
+    "tp": 46,
+    "fp": 171,
+    "fn": 43
+   },
+   "grieta_cocodrilo": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 95
+   },
+   "general": {
+    "precision": 0.244,
+    "recall": 0.218,
+    "f1": 0.23
+   }
+  },
+  "entorno_seguro_v3_fomo4.lite": {
+   "alcantarilla_riesgo": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 1,
+    "fn": 14
+   },
+   "alcantarilla_tapada": {
+    "precision": 0.438,
+    "recall": 0.519,
+    "f1": 0.475,
+    "tp": 14,
+    "fp": 18,
+    "fn": 13
+   },
+   "arbol_riesgo": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 55
+   },
+   "bache": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 89
+   },
+   "dano_pavimento": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 121,
+    "fn": 0
+   },
+   "grieta_cocodrilo": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 95
+   },
+   "general": {
+    "precision": 0.091,
+    "recall": 0.05,
+    "f1": 0.065
+   }
+  },
+  "entorno_seguro_v2a_lr001.lite": {
+   "alcantarilla_riesgo": {
+    "precision": 0.133,
+    "recall": 0.143,
+    "f1": 0.138,
+    "tp": 2,
+    "fp": 13,
+    "fn": 12
+   },
+   "alcantarilla_tapada": {
+    "precision": 0.588,
+    "recall": 0.37,
+    "f1": 0.455,
+    "tp": 10,
+    "fp": 7,
+    "fn": 17
+   },
+   "arbol_riesgo": {
+    "precision": 1.0,
+    "recall": 0.036,
+    "f1": 0.07,
+    "tp": 2,
+    "fp": 0,
+    "fn": 53
+   },
+   "bache": {
+    "precision": 0.386,
+    "recall": 0.303,
+    "f1": 0.34,
+    "tp": 27,
+    "fp": 43,
+    "fn": 62
+   },
+   "grieta_cocodrilo": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 95
+   },
+   "general": {
+    "precision": 0.394,
+    "recall": 0.146,
+    "f1": 0.214
+   }
+  }
+ },
+ "n_imagenes": {
+  "completo": 592,
+  "limpio": 261
+ },
+ "limpio_unido": {
+  "entorno_seguro_7clases.lite": {
+   "alcantarilla_riesgo": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 3,
+    "fn": 14
+   },
+   "alcantarilla_tapada": {
+    "precision": 0.5,
+    "recall": 0.593,
+    "f1": 0.542,
+    "tp": 16,
+    "fp": 16,
+    "fn": 11
+   },
+   "arbol_riesgo": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 55
+   },
+   "dano_pavimento": {
+    "precision": 0.345,
+    "recall": 0.37,
+    "f1": 0.357,
+    "tp": 68,
+    "fp": 129,
+    "fn": 116
+   },
+   "general": {
+    "precision": 0.362,
+    "recall": 0.3,
+    "f1": 0.328
+   }
+  },
+  "entorno_seguro_v2b_lr005.lite": {
+   "alcantarilla_riesgo": {
+    "precision": 0.125,
+    "recall": 0.071,
+    "f1": 0.091,
+    "tp": 1,
+    "fp": 7,
+    "fn": 13
+   },
+   "alcantarilla_tapada": {
+    "precision": 0.591,
+    "recall": 0.481,
+    "f1": 0.531,
+    "tp": 13,
+    "fp": 9,
+    "fn": 14
+   },
+   "arbol_riesgo": {
+    "precision": 0.333,
+    "recall": 0.018,
+    "f1": 0.034,
+    "tp": 1,
+    "fp": 2,
+    "fn": 54
+   },
+   "dano_pavimento": {
+    "precision": 0.286,
+    "recall": 0.337,
+    "f1": 0.309,
+    "tp": 62,
+    "fp": 155,
+    "fn": 122
+   },
+   "general": {
+    "precision": 0.308,
+    "recall": 0.275,
+    "f1": 0.291
+   }
+  },
+  "entorno_seguro_v3_fomo4.lite": {
+   "alcantarilla_riesgo": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 1,
+    "fn": 14
+   },
+   "alcantarilla_tapada": {
+    "precision": 0.438,
+    "recall": 0.519,
+    "f1": 0.475,
+    "tp": 14,
+    "fp": 18,
+    "fn": 13
+   },
+   "arbol_riesgo": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 55
+   },
+   "dano_pavimento": {
+    "precision": 0.438,
+    "recall": 0.288,
+    "f1": 0.348,
+    "tp": 53,
+    "fp": 68,
+    "fn": 131
+   },
+   "general": {
+    "precision": 0.435,
+    "recall": 0.239,
+    "f1": 0.309
+   }
+  },
+  "entorno_seguro_v2a_lr001.lite": {
+   "alcantarilla_riesgo": {
+    "precision": 0.133,
+    "recall": 0.143,
+    "f1": 0.138,
+    "tp": 2,
+    "fp": 13,
+    "fn": 12
+   },
+   "alcantarilla_tapada": {
+    "precision": 0.588,
+    "recall": 0.37,
+    "f1": 0.455,
+    "tp": 10,
+    "fp": 7,
+    "fn": 17
+   },
+   "arbol_riesgo": {
+    "precision": 1.0,
+    "recall": 0.036,
+    "f1": 0.07,
+    "tp": 2,
+    "fp": 0,
+    "fn": 53
+   },
+   "dano_pavimento": {
+    "precision": 0.486,
+    "recall": 0.185,
+    "f1": 0.268,
+    "tp": 34,
+    "fp": 36,
+    "fn": 150
+   },
+   "general": {
+    "precision": 0.462,
+    "recall": 0.171,
+    "f1": 0.25
+   }
+  }
+ }
+}

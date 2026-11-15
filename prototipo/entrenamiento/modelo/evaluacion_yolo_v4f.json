@@ -1,0 +1,793 @@
+{
+ "n_imagenes": 261,
+ "umbral_0.5": {
+  "alcantarilla_riesgo": {
+   "precision": 0.714,
+   "recall": 0.357,
+   "f1": 0.476,
+   "tp": 5,
+   "fp": 2,
+   "fn": 9
+  },
+  "alcantarilla_tapada": {
+   "precision": 0.75,
+   "recall": 0.778,
+   "f1": 0.764,
+   "tp": 21,
+   "fp": 7,
+   "fn": 6
+  },
+  "arbol_riesgo": {
+   "precision": 0.857,
+   "recall": 0.327,
+   "f1": 0.474,
+   "tp": 18,
+   "fp": 3,
+   "fn": 37
+  },
+  "dano_pavimento": {
+   "precision": 0.926,
+   "recall": 0.272,
+   "f1": 0.42,
+   "tp": 50,
+   "fp": 4,
+   "fn": 134
+  },
+  "general": {
+   "precision": 0.855,
+   "recall": 0.336,
+   "f1": 0.482
+  }
+ },
+ "curva": {
+  "alcantarilla_riesgo": [
+   {
+    "umbral": 0.05,
+    "precision": 0.538,
+    "recall": 0.5,
+    "f1": 0.519,
+    "tp": 7,
+    "fp": 6,
+    "fn": 7
+   },
+   {
+    "umbral": 0.1,
+    "precision": 0.583,
+    "recall": 0.5,
+    "f1": 0.538,
+    "tp": 7,
+    "fp": 5,
+    "fn": 7
+   },
+   {
+    "umbral": 0.15,
+    "precision": 0.583,
+    "recall": 0.5,
+    "f1": 0.538,
+    "tp": 7,
+    "fp": 5,
+    "fn": 7
+   },
+   {
+    "umbral": 0.2,
+    "precision": 0.6,
+    "recall": 0.429,
+    "f1": 0.5,
+    "tp": 6,
+    "fp": 4,
+    "fn": 8
+   },
+   {
+    "umbral": 0.25,
+    "precision": 0.667,
+    "recall": 0.429,
+    "f1": 0.522,
+    "tp": 6,
+    "fp": 3,
+    "fn": 8
+   },
+   {
+    "umbral": 0.3,
+    "precision": 0.75,
+    "recall": 0.429,
+    "f1": 0.545,
+    "tp": 6,
+    "fp": 2,
+    "fn": 8
+   },
+   {
+    "umbral": 0.35,
+    "precision": 0.714,
+    "recall": 0.357,
+    "f1": 0.476,
+    "tp": 5,
+    "fp": 2,
+    "fn": 9
+   },
+   {
+    "umbral": 0.4,
+    "precision": 0.714,
+    "recall": 0.357,
+    "f1": 0.476,
+    "tp": 5,
+    "fp": 2,
+    "fn": 9
+   },
+   {
+    "umbral": 0.45,
+    "precision": 0.714,
+    "recall": 0.357,
+    "f1": 0.476,
+    "tp": 5,
+    "fp": 2,
+    "fn": 9
+   },
+   {
+    "umbral": 0.5,
+    "precision": 0.714,
+    "recall": 0.357,
+    "f1": 0.476,
+    "tp": 5,
+    "fp": 2,
+    "fn": 9
+   },
+   {
+    "umbral": 0.55,
+    "precision": 0.8,
+    "recall": 0.286,
+    "f1": 0.421,
+    "tp": 4,
+    "fp": 1,
+    "fn": 10
+   },
+   {
+    "umbral": 0.6,
+    "precision": 0.8,
+    "recall": 0.286,
+    "f1": 0.421,
+    "tp": 4,
+    "fp": 1,
+    "fn": 10
+   },
+   {
+    "umbral": 0.65,
+    "precision": 0.75,
+    "recall": 0.214,
+    "f1": 0.333,
+    "tp": 3,
+    "fp": 1,
+    "fn": 11
+   },
+   {
+    "umbral": 0.7,
+    "precision": 0.5,
+    "recall": 0.071,
+    "f1": 0.125,
+    "tp": 1,
+    "fp": 1,
+    "fn": 13
+   },
+   {
+    "umbral": 0.75,
+    "precision": 1.0,
+    "recall": 0.071,
+    "f1": 0.133,
+    "tp": 1,
+    "fp": 0,
+    "fn": 13
+   },
+   {
+    "umbral": 0.8,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 14
+   },
+   {
+    "umbral": 0.85,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 14
+   },
+   {
+    "umbral": 0.9,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 14
+   },
+   {
+    "umbral": 0.95,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 14
+   }
+  ],
+  "alcantarilla_tapada": [
+   {
+    "umbral": 0.05,
+    "precision": 0.543,
+    "recall": 0.926,
+    "f1": 0.685,
+    "tp": 25,
+    "fp": 21,
+    "fn": 2
+   },
+   {
+    "umbral": 0.1,
+    "precision": 0.595,
+    "recall": 0.926,
+    "f1": 0.725,
+    "tp": 25,
+    "fp": 17,
+    "fn": 2
+   },
+   {
+    "umbral": 0.15,
+    "precision": 0.641,
+    "recall": 0.926,
+    "f1": 0.758,
+    "tp": 25,
+    "fp": 14,
+    "fn": 2
+   },
+   {
+    "umbral": 0.2,
+    "precision": 0.676,
+    "recall": 0.926,
+    "f1": 0.781,
+    "tp": 25,
+    "fp": 12,
+    "fn": 2
+   },
+   {
+    "umbral": 0.25,
+    "precision": 0.694,
+    "recall": 0.926,
+    "f1": 0.794,
+    "tp": 25,
+    "fp": 11,
+    "fn": 2
+   },
+   {
+    "umbral": 0.3,
+    "precision": 0.694,
+    "recall": 0.926,
+    "f1": 0.794,
+    "tp": 25,
+    "fp": 11,
+    "fn": 2
+   },
+   {
+    "umbral": 0.35,
+    "precision": 0.694,
+    "recall": 0.926,
+    "f1": 0.794,
+    "tp": 25,
+    "fp": 11,
+    "fn": 2
+   },
+   {
+    "umbral": 0.4,
+    "precision": 0.697,
+    "recall": 0.852,
+    "f1": 0.767,
+    "tp": 23,
+    "fp": 10,
+    "fn": 4
+   },
+   {
+    "umbral": 0.45,
+    "precision": 0.71,
+    "recall": 0.815,
+    "f1": 0.759,
+    "tp": 22,
+    "fp": 9,
+    "fn": 5
+   },
+   {
+    "umbral": 0.5,
+    "precision": 0.75,
+    "recall": 0.778,
+    "f1": 0.764,
+    "tp": 21,
+    "fp": 7,
+    "fn": 6
+   },
+   {
+    "umbral": 0.55,
+    "precision": 0.769,
+    "recall": 0.741,
+    "f1": 0.755,
+    "tp": 20,
+    "fp": 6,
+    "fn": 7
+   },
+   {
+    "umbral": 0.6,
+    "precision": 0.773,
+    "recall": 0.63,
+    "f1": 0.694,
+    "tp": 17,
+    "fp": 5,
+    "fn": 10
+   },
+   {
+    "umbral": 0.65,
+    "precision": 0.75,
+    "recall": 0.444,
+    "f1": 0.558,
+    "tp": 12,
+    "fp": 4,
+    "fn": 15
+   },
+   {
+    "umbral": 0.7,
+    "precision": 0.7,
+    "recall": 0.259,
+    "f1": 0.378,
+    "tp": 7,
+    "fp": 3,
+    "fn": 20
+   },
+   {
+    "umbral": 0.75,
+    "precision": 0.714,
+    "recall": 0.185,
+    "f1": 0.294,
+    "tp": 5,
+    "fp": 2,
+    "fn": 22
+   },
+   {
+    "umbral": 0.8,
+    "precision": 0.8,
+    "recall": 0.148,
+    "f1": 0.25,
+    "tp": 4,
+    "fp": 1,
+    "fn": 23
+   },
+   {
+    "umbral": 0.85,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 27
+   },
+   {
+    "umbral": 0.9,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 27
+   },
+   {
+    "umbral": 0.95,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 27
+   }
+  ],
+  "arbol_riesgo": [
+   {
+    "umbral": 0.05,
+    "precision": 0.375,
+    "recall": 0.545,
+    "f1": 0.444,
+    "tp": 30,
+    "fp": 50,
+    "fn": 25
+   },
+   {
+    "umbral": 0.1,
+    "precision": 0.491,
+    "recall": 0.473,
+    "f1": 0.481,
+    "tp": 26,
+    "fp": 27,
+    "fn": 29
+   },
+   {
+    "umbral": 0.15,
+    "precision": 0.556,
+    "recall": 0.455,
+    "f1": 0.5,
+    "tp": 25,
+    "fp": 20,
+    "fn": 30
+   },
+   {
+    "umbral": 0.2,
+    "precision": 0.667,
+    "recall": 0.436,
+    "f1": 0.527,
+    "tp": 24,
+    "fp": 12,
+    "fn": 31
+   },
+   {
+    "umbral": 0.25,
+    "precision": 0.667,
+    "recall": 0.436,
+    "f1": 0.527,
+    "tp": 24,
+    "fp": 12,
+    "fn": 31
+   },
+   {
+    "umbral": 0.3,
+    "precision": 0.688,
+    "recall": 0.4,
+    "f1": 0.506,
+    "tp": 22,
+    "fp": 10,
+    "fn": 33
+   },
+   {
+    "umbral": 0.35,
+    "precision": 0.75,
+    "recall": 0.382,
+    "f1": 0.506,
+    "tp": 21,
+    "fp": 7,
+    "fn": 34
+   },
+   {
+    "umbral": 0.4,
+    "precision": 0.76,
+    "recall": 0.345,
+    "f1": 0.475,
+    "tp": 19,
+    "fp": 6,
+    "fn": 36
+   },
+   {
+    "umbral": 0.45,
+    "precision": 0.826,
+    "recall": 0.345,
+    "f1": 0.487,
+    "tp": 19,
+    "fp": 4,
+    "fn": 36
+   },
+   {
+    "umbral": 0.5,
+    "precision": 0.857,
+    "recall": 0.327,
+    "f1": 0.474,
+    "tp": 18,
+    "fp": 3,
+    "fn": 37
+   },
+   {
+    "umbral": 0.55,
+    "precision": 0.8,
+    "recall": 0.218,
+    "f1": 0.343,
+    "tp": 12,
+    "fp": 3,
+    "fn": 43
+   },
+   {
+    "umbral": 0.6,
+    "precision": 0.909,
+    "recall": 0.182,
+    "f1": 0.303,
+    "tp": 10,
+    "fp": 1,
+    "fn": 45
+   },
+   {
+    "umbral": 0.65,
+    "precision": 0.909,
+    "recall": 0.182,
+    "f1": 0.303,
+    "tp": 10,
+    "fp": 1,
+    "fn": 45
+   },
+   {
+    "umbral": 0.7,
+    "precision": 0.909,
+    "recall": 0.182,
+    "f1": 0.303,
+    "tp": 10,
+    "fp": 1,
+    "fn": 45
+   },
+   {
+    "umbral": 0.75,
+    "precision": 1.0,
+    "recall": 0.145,
+    "f1": 0.254,
+    "tp": 8,
+    "fp": 0,
+    "fn": 47
+   },
+   {
+    "umbral": 0.8,
+    "precision": 1.0,
+    "recall": 0.073,
+    "f1": 0.136,
+    "tp": 4,
+    "fp": 0,
+    "fn": 51
+   },
+   {
+    "umbral": 0.85,
+    "precision": 1.0,
+    "recall": 0.055,
+    "f1": 0.103,
+    "tp": 3,
+    "fp": 0,
+    "fn": 52
+   },
+   {
+    "umbral": 0.9,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 55
+   },
+   {
+    "umbral": 0.95,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 55
+   }
+  ],
+  "dano_pavimento": [
+   {
+    "umbral": 0.05,
+    "precision": 0.398,
+    "recall": 0.815,
+    "f1": 0.535,
+    "tp": 150,
+    "fp": 227,
+    "fn": 34
+   },
+   {
+    "umbral": 0.1,
+    "precision": 0.573,
+    "recall": 0.766,
+    "f1": 0.656,
+    "tp": 141,
+    "fp": 105,
+    "fn": 43
+   },
+   {
+    "umbral": 0.15,
+    "precision": 0.708,
+    "recall": 0.658,
+    "f1": 0.682,
+    "tp": 121,
+    "fp": 50,
+    "fn": 63
+   },
+   {
+    "umbral": 0.2,
+    "precision": 0.801,
+    "recall": 0.592,
+    "f1": 0.681,
+    "tp": 109,
+    "fp": 27,
+    "fn": 75
+   },
+   {
+    "umbral": 0.25,
+    "precision": 0.864,
+    "recall": 0.554,
+    "f1": 0.675,
+    "tp": 102,
+    "fp": 16,
+    "fn": 82
+   },
+   {
+    "umbral": 0.3,
+    "precision": 0.907,
+    "recall": 0.478,
+    "f1": 0.626,
+    "tp": 88,
+    "fp": 9,
+    "fn": 96
+   },
+   {
+    "umbral": 0.35,
+    "precision": 0.906,
+    "recall": 0.418,
+    "f1": 0.572,
+    "tp": 77,
+    "fp": 8,
+    "fn": 107
+   },
+   {
+    "umbral": 0.4,
+    "precision": 0.899,
+    "recall": 0.337,
+    "f1": 0.49,
+    "tp": 62,
+    "fp": 7,
+    "fn": 122
+   },
+   {
+    "umbral": 0.45,
+    "precision": 0.891,
+    "recall": 0.31,
+    "f1": 0.46,
+    "tp": 57,
+    "fp": 7,
+    "fn": 127
+   },
+   {
+    "umbral": 0.5,
+    "precision": 0.926,
+    "recall": 0.272,
+    "f1": 0.42,
+    "tp": 50,
+    "fp": 4,
+    "fn": 134
+   },
+   {
+    "umbral": 0.55,
+    "precision": 0.929,
+    "recall": 0.212,
+    "f1": 0.345,
+    "tp": 39,
+    "fp": 3,
+    "fn": 145
+   },
+   {
+    "umbral": 0.6,
+    "precision": 0.931,
+    "recall": 0.147,
+    "f1": 0.254,
+    "tp": 27,
+    "fp": 2,
+    "fn": 157
+   },
+   {
+    "umbral": 0.65,
+    "precision": 0.96,
+    "recall": 0.13,
+    "f1": 0.23,
+    "tp": 24,
+    "fp": 1,
+    "fn": 160
+   },
+   {
+    "umbral": 0.7,
+    "precision": 1.0,
+    "recall": 0.06,
+    "f1": 0.113,
+    "tp": 11,
+    "fp": 0,
+    "fn": 173
+   },
+   {
+    "umbral": 0.75,
+    "precision": 1.0,
+    "recall": 0.038,
+    "f1": 0.073,
+    "tp": 7,
+    "fp": 0,
+    "fn": 177
+   },
+   {
+    "umbral": 0.8,
+    "precision": 1.0,
+    "recall": 0.027,
+    "f1": 0.053,
+    "tp": 5,
+    "fp": 0,
+    "fn": 179
+   },
+   {
+    "umbral": 0.85,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 184
+   },
+   {
+    "umbral": 0.9,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 184
+   },
+   {
+    "umbral": 0.95,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 184
+   }
+  ]
+ },
+ "umbral_elegido": {
+  "alcantarilla_riesgo": {
+   "umbral": 0.3,
+   "alcanza_meta": false
+  },
+  "alcantarilla_tapada": {
+   "umbral": 0.25,
+   "alcanza_meta": false
+  },
+  "arbol_riesgo": {
+   "umbral": 0.6,
+   "alcanza_meta": true
+  },
+  "dano_pavimento": {
+   "umbral": 0.3,
+   "alcanza_meta": true
+  }
+ },
+ "con_umbral_elegido": {
+  "alcantarilla_riesgo": {
+   "precision": 0.75,
+   "recall": 0.429,
+   "f1": 0.545,
+   "tp": 6,
+   "fp": 2,
+   "fn": 8
+  },
+  "alcantarilla_tapada": {
+   "precision": 0.694,
+   "recall": 0.926,
+   "f1": 0.794,
+   "tp": 25,
+   "fp": 11,
+   "fn": 2
+  },
+  "arbol_riesgo": {
+   "precision": 0.909,
+   "recall": 0.182,
+   "f1": 0.303,
+   "tp": 10,
+   "fp": 1,
+   "fn": 45
+  },
+  "dano_pavimento": {
+   "precision": 0.907,
+   "recall": 0.478,
+   "f1": 0.626,
+   "tp": 88,
+   "fp": 9,
+   "fn": 96
+  },
+  "general": {
+   "precision": 0.849,
+   "recall": 0.461,
+   "f1": 0.597
+  }
+ }
+}

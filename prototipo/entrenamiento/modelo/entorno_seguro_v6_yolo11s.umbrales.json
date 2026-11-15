@@ -1,0 +1,22 @@
+{
+ "umbrales": {
+  "alcantarilla_riesgo": 0.55,
+  "alcantarilla_tapada": 0.5,
+  "arbol_riesgo": 0.8,
+  "dano_pavimento": 0.45
+ },
+ "alcanza_meta": {
+  "alcantarilla_riesgo": true,
+  "alcantarilla_tapada": true,
+  "arbol_riesgo": true,
+  "dano_pavimento": true
+ },
+ "origen": "evaluar_yolo.py --prueba calibracion_v6: menor umbral con precision>=0.9 en validacion v5 + escenas de Guadalajara de validacion (1013 imagenes)",
+ "filtro": true,
+ "umbrales_campo": {
+  "alcantarilla_riesgo": 0.55,
+  "alcantarilla_tapada": 0.5,
+  "arbol_riesgo": 0.8,
+  "dano_pavimento": 0.45
+ }
+}

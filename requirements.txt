@@ -1,0 +1,12 @@
+# Sistema de agentes y tableros (Python 3.12, CPU)
+numpy==2.5.4
+pillow==12.3.0
+onnxruntime==1.31.1
+python-docx==1.2.0
+matplotlib==3.11.2
+# Plataforma con base de datos y bucket (opcional)
+psycopg[binary]==3.3.6
+boto3==1.35.24
+# Solo para reentrenar el detector (GPU NVIDIA recomendada)
+# ultralytics==8.4.211
+# torch==2.6.0

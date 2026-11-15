@@ -1,0 +1,31 @@
+{
+ "instituciones_inspeccionadas": 539,
+ "instituciones_con_hallazgos": 373,
+ "hallazgos": 494,
+ "por_tipo": {
+  "Árbol de riesgo (rama sobre cable o tronco inclinado)": 77,
+  "Daño en el pavimento (bache o piel de cocodrilo)": 15,
+  "Sin cruce peatonal visible en zona con atropellamientos": 116,
+  "Alcantarilla obstruida, abierta o dañada": 2,
+  "Poste y cableado eléctrico a revisar": 271,
+  "Rejilla pluvial: limpieza preventiva antes del temporal": 13
+ },
+ "por_dependencia": {
+  "Parques y Jardines": 77,
+  "Dirección de Pavimentos": 15,
+  "Dirección de Movilidad": 116,
+  "Agua y Drenaje (SIAPA)": 15,
+  "Alumbrado Público / CFE": 271
+ },
+ "por_zona": {
+  "Zona 1 · Centro": 125,
+  "Zona 4 · Oblatos": 98,
+  "Zona 2 · Minerva": 127,
+  "Zona 6 · Tetlán": 68,
+  "Zona 5 · Olímpica": 21,
+  "Zona 7 · Cruz del Sur": 34,
+  "Zona 3 · Huentitán": 21
+ },
+ "umbral": 0.5,
+ "clima": "actual"
+}
